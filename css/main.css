@@ -1,6 +1,9 @@
-body {
+* {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  background-color: #393c40;
+  background-color: #2C2F33;
   color: #ffffff;
+}
+.nav-item{
+  margin-right: 30px;
 }
