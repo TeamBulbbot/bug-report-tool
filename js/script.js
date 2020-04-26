@@ -19,7 +19,7 @@ function updateValue(e) {
     amtOfSteps++;
 }
 
-var intervalID = window.setInterval(myCallback, 500);
+var intervalID = window.setInterval(myCallback, 1000);
 
 function myCallback() {
     var x = document.getElementById("command")
