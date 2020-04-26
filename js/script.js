@@ -18,6 +18,21 @@ function updateValue(e) {
 
     amtOfSteps++;
 }
+var removeStr = window.setInterval(callbackSTR, 100);
+function callbackSTR() {
+
+    for (let i = 1; i < amtOfSteps - 1; i++) {
+        if (document.getElementById("stepsToRepro" + i).value == "") {
+            document.getElementById("stepsToRepro" + (i + 1)).remove();
+            amtOfSteps--;
+
+            const input = document.getElementById('stepsToRepro' + (amtOfSteps - 1));
+            input.addEventListener('input', updateValue);
+        }
+
+    }
+    console.log(amtOfSteps)
+}
 
 var intervalID = window.setInterval(myCallback, 1000);
 
