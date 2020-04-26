@@ -15,6 +15,14 @@ body {
   background-color: #2C2F33;
 }
 
+.bh {
+  color: #e22d2d;
+}
+
+.helper {
+  color: #13aae6;
+}
+
 .mbox {
   padding: 1.25rem;
   border-radius: 0.1875rem;

@@ -1,7 +1,7 @@
 * {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    color: #000000;
+    color: #ffffff;
 
 }
 .navColor{
@@ -12,15 +12,7 @@
 }
 
 body {
-    background-color: #ffffff;
-}
-
-.bh {
-    color: #e22d2d;
-}
-
-.helper {
-    color: #13aae6;
+    background-color: #2C2F33;
 }
 
 .mbox {
@@ -48,12 +40,12 @@ body {
 strong {
     font-weight: bolder;
     font-size: 15px;
-    color: #000000;
+    color: #959c97;
 }
 
 li {
     font-weight: bold;
     text-align: left;
     font-size: 15px;
-    color: #000000;
+    color: #959c97;
 }
