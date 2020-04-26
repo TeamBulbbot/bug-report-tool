@@ -1,51 +1,50 @@
 * {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    color: #ffffff;
-
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
 }
-.navColor{
-    background-color: #7289DA;
+.navColor {
+  background-color: #7289da;
 }
-#titleText{
-    font-size: 105%;
+#titleText {
+  font-size: 105%;
 }
 
 body {
-    background-color: #2C2F33;
+  background-color: #2c2f33;
 }
 
 .mbox {
-    padding: 1.25rem;
-    border-radius: 0.1875rem;
-    border: 0.0625rem solid rgba(0,0,0,.3);
-    color: rgba(255,255,255,.7);
-    background-color: rgba(0,0,0,.1);
-    font-weight: 400;
-    font-size: 0.8125rem;
+  padding: 1.25rem;
+  border-radius: 0.1875rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  font-size: 0.8125rem;
 }
 
 .column {
-    padding-left: 100px;
-    padding-right: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 @media screen and (max-width: 686px) {
-    .column {
-        padding-right: 10px;
-        padding-left: 10px;
-    }
+  .column {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 
 strong {
-    font-weight: bolder;
-    font-size: 15px;
-    color: #959c97;
+  font-weight: bolder;
+  font-size: 15px;
+  color: #959c97;
 }
 
 li {
-    font-weight: bold;
-    text-align: left;
-    font-size: 15px;
-    color: #959c97;
+  font-weight: bold;
+  text-align: left;
+  font-size: 15px;
+  color: #959c97;
 }
