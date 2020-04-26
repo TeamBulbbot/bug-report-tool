@@ -7,6 +7,9 @@
 .navColor{
   background-color: #7289DA;
 }
+#titleText{
+  font-size: 105%;
+}
 
 body {
   background-color: #2C2F33;

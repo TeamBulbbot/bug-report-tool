@@ -4,6 +4,9 @@
   color: #ffffff;
 
 }
+#titleText{
+  font-size: 105%;
+}
 .navColor{
   background-color: #7289DA;
 }
