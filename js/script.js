@@ -20,7 +20,6 @@ function updateValue(e) {
 }
 var removeStr = window.setInterval(callbackSTR, 100);
 function callbackSTR() {
-
     for (let i = 1; i < amtOfSteps - 1; i++) {
         if (document.getElementById("stepsToRepro" + i).value == "") {
             document.getElementById("stepsToRepro" + (i + 1)).remove();
@@ -31,7 +30,6 @@ function callbackSTR() {
         }
 
     }
-    console.log(amtOfSteps)
 }
 
 var intervalID = window.setInterval(myCallback, 1000);
