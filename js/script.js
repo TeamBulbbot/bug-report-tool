@@ -17,8 +17,6 @@ function updateValue(e) {
     document.getElementById("stepsToRepro" + (amtOfSteps - 1)).removeEventListener("input", updateValue);
 
     amtOfSteps++;
-
-
 }
 /*
 !submit This is a Short Description |

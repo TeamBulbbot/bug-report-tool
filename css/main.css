@@ -30,6 +30,13 @@ body {
   padding-right: 100px;
 }
 
+@media screen and (max-width: 686px) {
+  .column {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
 strong {
   font-weight: bolder;
   font-size: 15px;
