@@ -22,6 +22,10 @@ body {
   color: #13aae6;
 }
 
+.material-icons {
+  padding-top: 4px;
+}
+
 .mbox {
   padding: 1.25rem;
   border-radius: 0.1875rem;
@@ -41,6 +45,10 @@ body {
   .column {
     padding-right: 10px;
     padding-left: 10px;
+  }
+
+  .material-icons {
+    padding-top: 0px;
   }
 }
 
