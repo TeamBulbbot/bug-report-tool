@@ -35,14 +35,7 @@ function updateValue(e) {
   x.setAttribute("maxlength", "75");
   x.addEventListener("input", updateValue);
 
-  var y = document.createElement("span");
-  y.setAttribute("class", "character-counter");
-  y.setAttribute("id", "counter" + amtOfSteps);
-  y.style.float = "right";
-  y.style.fontSize = "12px";
-
   document.getElementById("steps").appendChild(x);
-  document.getElementById("steps").appendChild(y);
 
   $(document).ready(function () {
     $("textarea#stepsToRepro" + (amtOfSteps - 1)).characterCounter();
@@ -58,6 +51,7 @@ function callbackSTR() {
   for (let i = 1; i < amtOfSteps - 1; i++) {
     if (document.getElementById("stepsToRepro" + i).value == "") {
       document.getElementById("stepsToRepro" + (i + 1)).remove();
+      document.getElementById("steps").getElementsByClassName("character-counter")[i].remove();
       amtOfSteps--;
 
       const input = document.getElementById("stepsToRepro" + (amtOfSteps - 1));
