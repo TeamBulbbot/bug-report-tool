@@ -7,9 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.FormSelect.init(elems, options);
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  var textNeedCount = document.querySelectorAll('#shortDesc');
+  M.CharacterCounter.init(textNeedCount);
+});
+
+
 $(document).ready(function(){
   $('.modal').modal();
   $('select').formSelect();
+  $('textarea#shortDesc, textarea#stepsToRepro1, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers').characterCounter();
 });
 
 // Or with jQuery
