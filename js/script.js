@@ -2,27 +2,25 @@ $(document).ready(function () {
   $(".sidenav").sidenav();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('select');
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll("select");
   var instances = M.FormSelect.init(elems, options);
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  var textNeedCount = document.querySelectorAll('#shortDesc');
+document.addEventListener("DOMContentLoaded", function () {
+  var textNeedCount = document.querySelectorAll("#shortDesc");
   M.CharacterCounter.init(textNeedCount);
 });
 
-
-$(document).ready(function(){
-  $('.modal').modal();
-  $('select').formSelect();
-  $('textarea#shortDesc, textarea#stepsToRepro1, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers').characterCounter();
+$(document).ready(function () {
+  $(".modal").modal();
+  $("select").formSelect();
+  $("textarea#shortDesc, textarea#stepsToRepro1, textarea#stepsToRepro2, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
 });
 
 // Or with jQuery
 
-$('.dropdown-trigger').dropdown();
-
+$(".dropdown-trigger").dropdown();
 
 let amtOfSteps = 2;
 
@@ -33,13 +31,28 @@ function updateValue(e) {
   var x = document.createElement("TEXTAREA");
   x.setAttribute("class", "materialize-textarea");
   x.setAttribute("id", "stepsToRepro" + amtOfSteps);
+  x.setAttribute("data-length", "75");
+  x.setAttribute("maxlength", "75");
   x.addEventListener("input", updateValue);
 
+  var y = document.createElement("span");
+  y.setAttribute("class", "character-counter");
+  y.setAttribute("id", "counter" + amtOfSteps);
+  y.style.float = "right";
+  y.style.fontSize = "12px";
+
   document.getElementById("steps").appendChild(x);
+  document.getElementById("steps").appendChild(y);
+
+  $(document).ready(function () {
+    $("textarea#stepsToRepro" + (amtOfSteps - 1)).characterCounter();
+  });
+
   document.getElementById("stepsToRepro" + (amtOfSteps - 1)).removeEventListener("input", updateValue);
 
   amtOfSteps++;
 }
+
 var removeStr = window.setInterval(callbackSTR, 100);
 function callbackSTR() {
   for (let i = 1; i < amtOfSteps - 1; i++) {
