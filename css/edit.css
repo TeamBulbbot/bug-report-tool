@@ -29,6 +29,15 @@ body {
   padding-right: 100px;
 }
 
+.channel {
+  color: #7289DA;
+}
+
+.dropdown-content{
+  width: max-content !important;
+  height:auto !important;
+}
+
 @media screen and (max-width: 686px) {
   .column {
     padding-right: 10px;

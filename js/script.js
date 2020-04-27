@@ -2,6 +2,21 @@ $(document).ready(function () {
   $(".sidenav").sidenav();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems, options);
+});
+
+$(document).ready(function(){
+  $('.modal').modal();
+  $('select').formSelect();
+});
+
+// Or with jQuery
+
+$('.dropdown-trigger').dropdown();
+
+
 let amtOfSteps = 2;
 
 const input = document.getElementById("stepsToRepro1");
