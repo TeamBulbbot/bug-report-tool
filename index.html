@@ -1,197 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discord Bug Syntax Tool</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel='stylesheet' href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
+  <body>
+    <nav class="navColor" style="padding: 0px 5px; position: fixed;">
+      <div class="nav-bar">
+        <a href="#" class="brand-logo" id="titleText"><i class="material-icons left" style="padding-top: 3px; padding-left: 7px;">bug_report</i> DTesters Bug Tool</a>
 
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons">menu</i>
+        </a>
 
-</head>
-
-<body>
-    <nav class="navColor" style="padding:0px 5px; position: fixed;">
-        <div class="nav-bar">
-            <a href="#" class="brand-logo" id="titleText"><i class="material-icons left" style="padding-top: 3px; padding-left: 7px">bug_report</i>
-                DTesters Bug Tool</a>
-
-            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-                <i class="material-icons">menu</i>
-            </a>
-
-            <ul class="right hide-on-med-and-down ">
-                <li><a href="index.html"><i class="material-icons left" style="padding-top: 4px">add_box</i>Create</a></li>
-                <li><a href="edit.html"><i class="material-icons left" style="padding-top: 4px">update</i>Edit</a></li>
-                <li><a href="cnr-cr.html"><i class="material-icons left" style="padding-top: 4px">done_all</i>CR / CNR</a></li>
-                <li><a href="indexWhite.html"><i class="material-icons left" style="padding-top: 4px">wb_sunny</i>Change Theme</a></li>
-
-            </ul>
-        </div>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="index.html"><i class="material-icons left" style="padding-top: 4px;">add_box</i>Create</a>
+          </li>
+          <li>
+            <a href="edit.html"><i class="material-icons left" style="padding-top: 4px;">update</i>Edit</a>
+          </li>
+          <li>
+            <a href="cnr-cr.html"><i class="material-icons left" style="padding-top: 4px;">done_all</i>CR / CNR</a>
+          </li>
+          <li>
+            <a href="indexWhite.html"><i class="material-icons left" style="padding-top: 4px;">wb_sunny</i>Change Theme</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <ul class="sidenav" id="mobile-nav">
-        <li><a href="index.html"><i class="material-icons left">add_box</i>Create</a></li>
-        <li><a href="edit.html"><i class="material-icons left">update</i>Edit</a></li>
-        <li><a href="cnr-cr.html"><i class="material-icons left">done_all</i>CR / CNR</a></li>
-        <li><a href="indexWhite.html"><i class="material-icons left">wb_sunny</i>Change Theme</a></li>
+      <li>
+        <a href="index.html"><i class="material-icons left">add_box</i>Create</a>
+      </li>
+      <li>
+        <a href="edit.html"><i class="material-icons left">update</i>Edit</a>
+      </li>
+      <li>
+        <a href="cnr-cr.html"><i class="material-icons left">done_all</i>CR / CNR</a>
+      </li>
+      <li>
+        <a href="indexWhite.html"><i class="material-icons left">wb_sunny</i>Change Theme</a>
+      </li>
     </ul>
 
-    <br>
+    <br />
     <div class="column row" id="content">
-        ::before
-        <h5 style="padding-top: 20px; padding-left: 5px">Create a Bug Report</h5>
-        <div class="callout mbox" style="offset-start: 1cm">
-            <strong>Alert:</strong>
-            <ul>
-                <li style="list-style-type: initial; margin-left: 25px;">Please note this tool is still using the old
-                    bot workflow</li>
-                <li style="list-style-type: initial; margin-left: 25px;">The workflow will be updated once the server
-                    revamp comes out</li>
-            </ul>
-        </div>
-        <br>
+      ::before
+      <h5 style="padding-top: 20px; padding-left: 5px;">Create a Bug Report</h5>
+      <div class="callout mbox" style="offset-start: 1cm;">
+        <strong>Alert:</strong>
+        <ul>
+          <li style="list-style-type: initial; margin-left: 25px;">Please note this tool is still using the old bot workflow</li>
+          <li style="list-style-type: initial; margin-left: 25px;">The workflow will be updated once the server revamp comes out</li>
+        </ul>
+      </div>
+      <br />
 
-        <div class="callout mbox" style="offset-start: 1cm">
-            <strong>Before we start</strong>
-            <ul>
-                <li style="list-style-type: initial; margin-left: 25px;">Make sure to check the relevant Trello board to see if your bug hasn't been already reported.</li>
-                <br>
-                <li style="list-style-type: initial; margin-left: 25px;">Desktop: <a
-                        href="https://trello.com/b/AExxR9lU/canary-bugs"
-                        target="_blank">https://trello.com/b/AExxR9lU/canary-bugs</a>
-                </li>
-                <li style="list-style-type: initial; margin-left: 25px;">Android: <a
-                        href="https://trello.com/b/Vqrkz3KO/android-beta-bugs"
-                        target="_blank">https://trello.com/b/Vqrkz3KO/android-beta-bugs</a>
-                </li>
-                <li style="list-style-type: initial; margin-left: 25px;">IOS: <a
-                        href="https://trello.com/b/vLPlnX60/ios-testflight-bugs"
-                        target="_blank">https://trello.com/b/vLPlnX60/ios-testflight-bugs</a>
-                </li>
-                <li style="list-style-type: initial; margin-left: 25px;">Store: <a
-                        href="https://trello.com/b/Fb0LyRnD/store-bugs"
-                        target="_blank">https://trello.com/b/Fb0LyRnD/store-bugs</a>
-                </li>
-                <li style="list-style-type: initial; margin-left: 25px;">Website: <a
-                        href="https://trello.com/b/3ubHh1rm/website-bug-board"
-                        target="_blank">https://trello.com/b/3ubHh1rm/website-bug-board</a>
-                </li>
-                <li style="list-style-type: initial; margin-left: 25px;">Overlay: <a
-                        href="https://trello.com/b/k6jr4NyY/overlay-bugs"
-                        target="_blank">https://trello.com/b/k6jr4NyY/overlay-bugs</a>
-                </li>
+      <div class="callout mbox" style="offset-start: 1cm;">
+        <strong>Before we start</strong>
+        <ul>
+          <li style="list-style-type: initial; margin-left: 25px;">Make sure to check the relevant Trello board to see if your bug hasn't been already reported.</li>
+          <br />
+          <li style="list-style-type: initial; margin-left: 25px;">Desktop: <a href="https://trello.com/b/AExxR9lU/canary-bugs" target="_blank">https://trello.com/b/AExxR9lU/canary-bugs</a></li>
+          <li style="list-style-type: initial; margin-left: 25px;">Android: <a href="https://trello.com/b/Vqrkz3KO/android-beta-bugs" target="_blank">https://trello.com/b/Vqrkz3KO/android-beta-bugs</a></li>
+          <li style="list-style-type: initial; margin-left: 25px;">IOS: <a href="https://trello.com/b/vLPlnX60/ios-testflight-bugs" target="_blank">https://trello.com/b/vLPlnX60/ios-testflight-bugs</a></li>
+          <li style="list-style-type: initial; margin-left: 25px;">Store: <a href="https://trello.com/b/Fb0LyRnD/store-bugs" target="_blank">https://trello.com/b/Fb0LyRnD/store-bugs</a></li>
+          <li style="list-style-type: initial; margin-left: 25px;">Website: <a href="https://trello.com/b/3ubHh1rm/website-bug-board" target="_blank">https://trello.com/b/3ubHh1rm/website-bug-board</a></li>
+          <li style="list-style-type: initial; margin-left: 25px;">Overlay: <a href="https://trello.com/b/k6jr4NyY/overlay-bugs" target="_blank">https://trello.com/b/k6jr4NyY/overlay-bugs</a></li>
 
-                <br>
+          <br />
 
-                <li style="list-style-type: initial; margin-left: 25px;">If you didn't find it to be reported on Trello
-                    you can also use the relevent report channel and use the serach command inside of Discord.</li>
-                <li style="list-style-type: initial; margin-left: 25px;">Please note that this site will NOT submit the bug for you.</li>
-                <li style="list-style-type: initial; margin-left: 25px;">
-                    If you want to attach an image/video to your report please ask a
-                    <strong class="bh">Bug Hunter</strong>
-                    or a
-                    <strong class="helper">Helper</strong>
-                    to attach it for you
-                </li>
-            </ul>
-        </div>
-        <br>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">description</i>
-                        <textarea id="shortDesc" class="materialize-textarea"></textarea>
-                        <label for="shortDesc">Short Description</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <div id="steps">
-                            <i class="material-icons prefix">mode_edit</i>
-                            <label for="stepsToRepro1">Steps to Reproduce</label>
-                            <textarea id="stepsToRepro1" class="materialize-textarea"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">star_border</i>
-                        <textarea id="expected" class="materialize-textarea"></textarea>
-                        <label for="expected">Expected Result</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">star</i>
-                        <textarea id="actual" class="materialize-textarea"></textarea>
-                        <label for="actual">Actual Result</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">computer</i>
-                        <textarea id="clientVers" class="materialize-textarea"></textarea>
-                        <label for="clientVers">Client Version</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">settings</i>
-                        <textarea id="systemVers" class="materialize-textarea"></textarea>
-                        <label for="systemVers">System Settings</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-
-        <div class="column row" id="content">
-            <button id="copy" class="waves-effect waves-light btn">Copy</button>
-            <div class="callout mbox" style="offset-start: 1cm; font-size:20px;" id="command">
-
+          <li style="list-style-type: initial; margin-left: 25px;">If you didn't find it to be reported on Trello you can also use the relevent report channel and use the search command inside of Discord.</li>
+          <li style="list-style-type: initial; margin-left: 25px;">Please note that this site will NOT submit the bug for you.</li>
+          <li style="list-style-type: initial; margin-left: 25px;">
+            If you want to attach an image/video to your report please ask a
+            <strong class="bh">Bug Hunter</strong>
+            or a
+            <strong class="helper">Helper</strong>
+            to attach it for you
+          </li>
+        </ul>
+      </div>
+      <br />
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">description</i>
+              <textarea id="shortDesc" class="materialize-textarea"></textarea>
+              <label for="shortDesc">Short Description</label>
             </div>
-            <br>
+          </div>
+        </form>
+      </div>
 
-        </div>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <div id="steps">
+                <i class="material-icons prefix">mode_edit</i>
+                <label for="stepsToRepro1">Steps to Reproduce</label>
+                <textarea id="stepsToRepro1" class="materialize-textarea"></textarea>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
 
-        <footer>Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a
-                href="https://github.com/KlukCZ" target="_blank">KlukCZ</a>
-        </footer>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">star_border</i>
+              <textarea id="expected" class="materialize-textarea"></textarea>
+              <label for="expected">Expected Result</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">star</i>
+              <textarea id="actual" class="materialize-textarea"></textarea>
+              <label for="actual">Actual Result</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">computer</i>
+              <textarea id="clientVers" class="materialize-textarea"></textarea>
+              <label for="clientVers">Client Version</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">settings</i>
+              <textarea id="systemVers" class="materialize-textarea"></textarea>
+              <label for="systemVers">System Settings</label>
+            </div>
+          </div>
+        </form>
+      </div>
 
-        <!-- Javascript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/copy.js"></script>
+      <div class="column row" id="content">
+        <button id="copy" class="waves-effect waves-light btn">Copy</button>
+        <div class="callout mbox" style="offset-start: 1cm; font-size: 20px;" id="command"></div>
+        <br />
+      </div>
+
+      <footer>Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a href="https://github.com/KlukCZ" target="_blank">KlukCZ</a></footer>
+
+      <!-- Javascript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/copy.js"></script>
     </div>
-</body>
-
+  </body>
 </html>
