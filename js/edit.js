@@ -3,6 +3,7 @@ $(document).ready(function() {
   $(".modal").modal();
   $("select").formSelect();
   $(".dropdown-trigger").dropdown();
+  $("textarea#reportID, textarea#newContent").characterCounter();
 });
 
 var intervalID = window.setInterval(myCallback, 1000);
