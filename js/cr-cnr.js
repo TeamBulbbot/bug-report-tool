@@ -1,18 +1,13 @@
 $(document).ready(function() {
-  $(".sidenav").sidenav();
-});
-
-
-$(document).ready(function() {
   $(".modal").modal();
   $("select").formSelect();
   $("textarea#trelloReport, textarea#clientVers, textarea#systemVers").characterCounter();
+  $(".dropdown-trigger").dropdown();
+  $(".sidenav").sidenav();
 });
 
-$(".dropdown-trigger").dropdown();
-
-
 var intervalID = window.setInterval(myCallback, 1000);
+
 
 function myCallback() {
   var x = document.getElementById("command");

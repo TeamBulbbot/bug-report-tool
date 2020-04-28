@@ -1,10 +1,22 @@
 $(document).ready(function() {
   $(".sidenav").sidenav();
+  $(".modal").modal();
+  $("select").formSelect();
+  $("textarea#shortDesc, textarea#stepsToRepro1, textarea#stepsToRepro2, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
+  $(".dropdown-trigger").dropdown();
 });
+
+var removeStr = window.setInterval(callbackSTR, 100);
+let amtOfSteps = 2;
+
+const input = document.getElementById("stepsToRepro1");
+input.addEventListener("input", updateValue);
+
+var intervalID = window.setInterval(myCallback, 1000);
 
 document.addEventListener("DOMContentLoaded", function() {
   var elems = document.querySelectorAll("select");
-  var instances = M.FormSelect.init(elems, options);
+  var instances = M.FormSelect.init(elems);
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -12,20 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
   M.CharacterCounter.init(textNeedCount);
 });
 
-$(document).ready(function() {
-  $(".modal").modal();
-  $("select").formSelect();
-  $("textarea#shortDesc, textarea#stepsToRepro1, textarea#stepsToRepro2, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
-});
-
-$(".dropdown-trigger").dropdown();
-
-
-
-let amtOfSteps = 2;
-
-const input = document.getElementById("stepsToRepro1");
-input.addEventListener("input", updateValue);
 
 function updateValue(e) {
   var x = document.createElement("TEXTAREA");
@@ -46,8 +44,6 @@ function updateValue(e) {
   amtOfSteps++;
 }
 
-var removeStr = window.setInterval(callbackSTR, 100);
-
 function callbackSTR() {
   for (let i = 1; i < amtOfSteps - 1; i++) {
     if (document.getElementById("stepsToRepro" + i).value == "") {
@@ -60,8 +56,6 @@ function callbackSTR() {
     }
   }
 }
-
-var intervalID = window.setInterval(myCallback, 1000);
 
 function myCallback() {
   var x = document.getElementById("command");

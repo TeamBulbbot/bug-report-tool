@@ -2,96 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Bug Syntax Tool</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Bug Syntax Tool</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel='stylesheet' href="css/edit.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel='stylesheet' href="css/edit.css" />
 
 
 
 </head>
 
 <body>
-<nav class="navColor" style="padding:0px 5px; position: fixed;">
+  <nav class="navColor" style="padding:0px 5px; position: fixed;">
     <div class="nav-bar">
-        <a href="#" class="brand-logo" id="titleText"><i class="material-icons left" style="padding-top: 3px; padding-left: 7px">bug_report</i>
-            DTesters Bug Tool</a>
+      <a href="#" class="brand-logo" id="titleText"><i class="material-icons left" style="padding-top: 3px; padding-left: 7px">bug_report</i>
+        DTesters Bug Tool</a>
 
-        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-            <i class="material-icons">menu</i>
-        </a>
+      <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+        <i class="material-icons">menu</i>
+      </a>
 
-        <ul class="right hide-on-med-and-down ">
-            <li><a href="index.html"><i class="material-icons left" style="padding-top: 4px">add_box</i>Create</a></li>
-            <li><a href="edit.html"><i class="material-icons left" style="padding-top: 4px">update</i>Edit</a></li>
-            <li><a href="cnr-cr.html"><i class="material-icons left" style="padding-top: 4px">done_all</i>CR / CNR</a></li>
-            <li><a href="editWhite.html"><i class="material-icons left" style="padding-top: 4px">wb_sunny</i>Change Theme</a></li>
+      <ul class="right hide-on-med-and-down ">
+        <li><a href="index.html"><i class="material-icons left" style="padding-top: 4px">add_box</i>Create</a></li>
+        <li><a href="edit.html"><i class="material-icons left" style="padding-top: 4px">update</i>Edit</a></li>
+        <li><a href="cnr-cr.html"><i class="material-icons left" style="padding-top: 4px">done_all</i>CR / CNR</a></li>
+        <li><a href="editWhite.html"><i class="material-icons left" style="padding-top: 4px">wb_sunny</i>Change Theme</a></li>
 
-        </ul>
+      </ul>
     </div>
-</nav>
-<ul class="sidenav" id="mobile-nav">
+  </nav>
+  <ul class="sidenav" id="mobile-nav">
     <li><a href="index.html"><i class="material-icons left">add_box</i>Create</a></li>
     <li><a href="edit.html"><i class="material-icons left">update</i>Edit</a></li>
     <li><a href="cnr-cr.html"><i class="material-icons left">done_all</i>CR / CNR</a></li>
     <li><a href="editWhite.html"><i class="material-icons left">wb_sunny</i>Change Theme</a></li>
-</ul>
+  </ul>
 
-<br>
-<div class="column row" id="content">
+  <br>
+  <div class="column row" id="content">
     ::before
     <h5 style="padding-top: 20px; padding-left: 5px">Edit a Bug Report</h5>
     <div class="callout mbox" style="offset-start: 1cm">
-        <strong>Alert:</strong>
-        <ul>
-            <li style="list-style-type: initial; margin-left: 25px;">Please note this tool is still using the old
-                bot workflow</li>
-            <li style="list-style-type: initial; margin-left: 25px;">The workflow will be updated once the server
-                revamp comes out</li>
-        </ul>
+      <strong>Alert:</strong>
+      <ul>
+        <li style="list-style-type: initial; margin-left: 25px;">Please note this tool is still using the old
+          bot workflow</li>
+        <li style="list-style-type: initial; margin-left: 25px;">The workflow will be updated once the server
+          revamp comes out</li>
+      </ul>
     </div>
 
-    <br/>
+    <br />
     <div class="callout mbox" style="offset-start: 1cm">
-        <strong>Before we start</strong>
-            <ul>
-                <li style="list-style-type: initial; margin-left: 25px">Please prepare your report ID</li>
-                <li style="list-style-type: initial; margin-left: 25px">You can find your report ID in <strong class="channel">#bug-approval-queue</strong> at the end of your report (<a href="https://imgur.com/a/JutlxXv" target="_blank">Example</a>)</li>
-            </ul>
+      <strong>Before we start</strong>
+      <ul>
+        <li style="list-style-type: initial; margin-left: 25px">Please prepare your report ID</li>
+        <li style="list-style-type: initial; margin-left: 25px">You can find your report ID in <strong class="channel">#bug-approval-queue</strong> at the end of your report (<a href="https://imgur.com/a/JutlxXv" target="_blank">Example</a>)</li>
+      </ul>
     </div>
     <br>
     <div class="row" style="z-index: 2">
-        <form class="col s12">
+      <form class="col s12">
         <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">description</i>
-                <select>
-                    <option value="1">Short Description</option>
-                    <option value="2">Steps to Reproduce</option>
-                    <option value="3">Expected Result</option>
-                    <option value="4">Actual Result</option>
-                    <option value="5">Client Version</option>
-                    <option value="6">System Settings</option>
-                </select>
-                <label>Section to Edit</label>
-            </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">description</i>
+            <select>
+              <option value="1">Short Description</option>
+              <option value="2">Steps to Reproduce</option>
+              <option value="3">Expected Result</option>
+              <option value="4">Actual Result</option>
+              <option value="5">Client Version</option>
+              <option value="6">System Settings</option>
+            </select>
+            <label>Section to Edit</label>
+          </div>
         </div>
-    </form>
+      </form>
     </div>
 
-    <footer>Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a
-            href="https://github.com/KlukCZ" target="_blank">KlukCZ</a>
+    <div class="column row" id="content">
+      <button id="copy" class="waves-effect waves-light btn">Copy</button>
+      <div class="callout mbox" style="offset-start: 1cm; font-size: 20px;" id="command"></div>
+      <br />
+    </div>
+
+
+
+    <footer>Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a href="https://github.com/KlukCZ" target="_blank">KlukCZ</a>
     </footer>
 
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/edit.js"></script>
     <script src="js/copy.js"></script>
-    </div>
+  </div>
 </body>
+
 </html>
