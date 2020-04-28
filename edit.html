@@ -63,13 +63,13 @@
       </ul>
     </div>
     <br>
-    <h1>Still work in progress</h1>
+
     <div class="row" style="z-index: 2">
       <form class="col s12">
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">description</i>
-            <select>
+            <select id="section">
               <option value="1">Short Description</option>
               <option value="2">Steps to Reproduce</option>
               <option value="3">Expected Result</option>
@@ -78,6 +78,30 @@
               <option value="6">System Settings</option>
             </select>
             <label>Section to Edit</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="row" style="z-index: 2">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">polymer</i>
+            <textarea id="reportID" class="materialize-textarea" data-length="50" maxlength="50"></textarea>
+            <label for="reportID" id="txtLabel">Report ID</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="row" style="z-index: 2">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">edit</i>
+            <textarea id="newContent" class="materialize-textarea" data-length="125" maxlength="125"></textarea>
+            <label for="newContent">New content</label>
           </div>
         </div>
       </form>
