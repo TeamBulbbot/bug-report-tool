@@ -1,26 +1,26 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $(".sidenav").sidenav();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   var elems = document.querySelectorAll("select");
   var instances = M.FormSelect.init(elems, options);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   var textNeedCount = document.querySelectorAll("#shortDesc");
   M.CharacterCounter.init(textNeedCount);
 });
 
-$(document).ready(function () {
+$(document).ready(function() {
   $(".modal").modal();
   $("select").formSelect();
   $("textarea#shortDesc, textarea#stepsToRepro1, textarea#stepsToRepro2, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
 });
 
-// Or with jQuery
-
 $(".dropdown-trigger").dropdown();
+
+
 
 let amtOfSteps = 2;
 
@@ -37,7 +37,7 @@ function updateValue(e) {
 
   document.getElementById("steps").appendChild(x);
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     $("textarea#stepsToRepro" + (amtOfSteps - 1)).characterCounter();
   });
 
@@ -47,6 +47,7 @@ function updateValue(e) {
 }
 
 var removeStr = window.setInterval(callbackSTR, 100);
+
 function callbackSTR() {
   for (let i = 1; i < amtOfSteps - 1; i++) {
     if (document.getElementById("stepsToRepro" + i).value == "") {
