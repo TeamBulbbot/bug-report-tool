@@ -30,3 +30,14 @@ function myCallback() {
     x.innerHTML += document.getElementById("systemVers").value;
   }
 }
+
+var x = window.matchMedia("(max-width: 686px)");
+resize(x);
+x.addListener(resize);
+
+function resize(x){
+  if (x.matches){
+    var label = document.getElementById("txtLabel");
+    label.setAttribute("style", "width: 200px");
+  }
+}
