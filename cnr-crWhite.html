@@ -1,1 +1,128 @@
-<h1>This is the CR/CNR page | LIGHT THEME</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bug Syntax Tool</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href="css/cnr-crWhite.css" />
+
+
+
+</head>
+
+<body>
+<nav class="navColor" style="padding:0px 5px; position: fixed;">
+    <div class="nav-bar">
+        <a href="#" class="brand-logo" id="titleText"><i class="material-icons left" style="padding-top: 3px; padding-left: 7px; color: white">bug_report</i>
+            DTesters Bug Tool</a>
+
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+        </a>
+
+        <ul class="right hide-on-med-and-down ">
+            <li><a href="index.html"><i class="material-icons left" style="padding-top: 4px; color: white">add_box</i>Create</a></li>
+            <li><a href="edit.html"><i class="material-icons left" style="padding-top: 4px; color: white">update</i>Edit</a></li>
+            <li><a href="cnr-cr.html"><i class="material-icons left" style="padding-top: 4px; color: white">done_all</i>CR / CNR</a></li>
+            <li><a href="cnr-cr.html"><i class="material-icons left" style="padding-top: 4px; color: white">wb_sunny</i>Change Theme</a></li>
+
+        </ul>
+    </div>
+</nav>
+<ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html"><i class="material-icons left">add_box</i>Create</a></li>
+    <li><a href="edit.html"><i class="material-icons left">update</i>Edit</a></li>
+    <li><a href="cnr-cr.html"><i class="material-icons left">done_all</i>CR / CNR</a></li>
+    <li><a href="cnr-cr.html"><i class="material-icons left">wb_sunny</i>Change Theme</a></li>
+</ul>
+
+<br>
+<div class="column row" id="content">
+    ::before
+    <h5 style="padding-top: 20px; padding-left: 5px">Add a CR/CNR</h5>
+    <div class="callout mbox" style="offset-start: 1cm">
+        <strong>Alert:</strong>
+        <ul>
+            <li style="list-style-type: initial; margin-left: 25px;">Please note this tool is still using the old
+                bot workflow</li>
+            <li style="list-style-type: initial; margin-left: 25px;">The workflow will be updated once the server
+                revamp comes out</li>
+        </ul>
+    </div>
+
+    <br/>
+    <div class="callout mbox" style="offset-start: 1cm">
+        <strong>Before we start</strong
+        <ul>
+            <li style="list-style-type: initial; margin-left: 25px">Please prepare the report ID or Trello link</li>
+            <li style="list-style-type: initial; margin-left: 25px">You can find your report ID in <strong class="channel">#platform-bug-reports</strong> at the end of the report (<a href="https://imgur.com/a/DvRi4yb" target="_blank">Example</a>)</li>
+        </ul>
+    </div>
+    <br>
+
+    <div class="row" style="z-index: 2">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">description</i>
+                    <select>
+                        <option value="1">Can Reproduce (CR)</option>
+                        <option value="2">Cannot Reproduce (CNR)</option>
+                    </select>
+                    <label>Select your Action</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row"  style="z-index: 2">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">polymer</i>
+                    <textarea id="expected" class="materialize-textarea" data-length="50" maxlength="50"></textarea>
+                    <label for="expected">Trello Link or Report ID</label>
+                    <span class="helper-text" style="color: #9e9e9e">Please only use short URLs</span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row"  style="z-index: 2">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">computer</i>
+                    <textarea id="clientVers" class="materialize-textarea"  data-length="125" maxlength="125"></textarea>
+                    <label for="clientVers">Client Version</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row"  style="z-index: 2">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">settings</i>
+                    <textarea id="systemVers" class="materialize-textarea"  data-length="125" maxlength="125"></textarea>
+                    <label for="systemVers">System Settings</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a
+            href="https://github.com/KlukCZ" target="_blank">KlukCZ</a>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/copy.js"></script>
+</div>
+</body>
+</html>
