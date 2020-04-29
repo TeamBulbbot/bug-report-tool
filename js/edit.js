@@ -70,7 +70,7 @@ function myCallback() {
   if (document.getElementById("reportID").value == "") x.innerHTML += "Report ID, ";
   if (document.getElementById("newContent").value == "") x.innerHTML += "New content";
 
-  if (x.innerHTML == "Missing ") {
+  if (x.innerHTML == "Missing " || document.getElementById("section").value == 2) {
     x.innerHTML = "!edit ";
     x.innerHTML += document.getElementById("reportID").value;
 
