@@ -81,7 +81,14 @@ function myCallback() {
     if (document.getElementById("section").value == 5) x.innerHTML += " | client | ";
     if (document.getElementById("section").value == 6) x.innerHTML += " | system | ";
 
-    x.innerHTML += document.getElementById("newContent").value;
+    if (document.getElementById("section").value == 2) {
+      for (let i = 1; i < amtOfSteps - 1; i++) {
+        if (i == amtOfSteps - 2) x.innerHTML += document.getElementById("stepsToRepro" + i).value;
+        else x.innerHTML += document.getElementById("stepsToRepro" + i).value + " - ";
+      }
+
+    } else x.innerHTML += document.getElementById("newContent").value;
+
 
   }
 }
