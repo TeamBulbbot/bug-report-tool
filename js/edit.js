@@ -1,3 +1,16 @@
+/*!
+ * Sanitize and encode all HTML in a user-submitted string
+ * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {String} str  The user-submitted string
+ * @return {String} str  The sanitized string
+ */
+var sanitizeHTML = function(str) {
+  var temp = document.createElement('div');
+  temp.textContent = str;
+  return temp.innerHTML;
+};
+
+
 $(document).ready(function() {
   $(".sidenav").sidenav();
   $(".modal").modal();
@@ -9,11 +22,7 @@ $(document).ready(function() {
 var intervalID = window.setInterval(myCallback, 1000);
 var strInternval = window.setInterval(checkIfSTRISActive, 1000);
 
-var removeStr = window.setInterval(callbackSTR, 100);
-let amtOfSteps = 2;
 
-const input = document.getElementById("stepsToRepro1");
-input.addEventListener("input", updateValue);
 
 function checkIfSTRISActive() {
   if (document.getElementById("section").value == 2) {
@@ -30,37 +39,61 @@ function checkIfSTRISActive() {
 }
 
 
-function updateValue(e) {
-  var x = document.createElement("TEXTAREA");
-  x.setAttribute("class", "materialize-textarea");
-  x.setAttribute("id", "stepsToRepro" + amtOfSteps);
-  x.setAttribute("data-length", "75");
-  x.setAttribute("maxlength", "75");
-  x.addEventListener("input", updateValue);
-
-  document.getElementById("steps").appendChild(x);
-
-  $(document).ready(function() {
-    $("textarea#stepsToRepro" + (amtOfSteps - 1)).characterCounter();
-  });
-
-  document.getElementById("stepsToRepro" + (amtOfSteps - 1)).removeEventListener("input", updateValue);
-
-  amtOfSteps++;
+// Create a "close" button and append it to each list item
+var steps = document.getElementsByClassName("collection-item");
+var i;
+for (i = 0; i < steps.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  steps[i].appendChild(span);
 }
 
-function callbackSTR() {
-  for (let i = 1; i < amtOfSteps - 1; i++) {
-    if (document.getElementById("stepsToRepro" + i).value == "") {
-      document.getElementById("stepsToRepro" + (i + 1)).remove();
-      document.getElementById("steps").getElementsByClassName("character-counter")[i - 1].remove();
-      amtOfSteps--;
-
-      const input = document.getElementById("stepsToRepro" + (amtOfSteps - 1));
-      input.addEventListener("input", updateValue);
-    }
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.remove()
   }
 }
+
+
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  li.setAttribute("class", "collection-item")
+  li.setAttribute("style", "background-color: transparent; border:none")
+
+  var inputValue = document.getElementById("str").value;
+  var t = document.createTextNode(" - " + inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("str").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode(" \u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.remove()
+    }
+  }
+
+}
+
+
 
 
 function myCallback() {
@@ -72,7 +105,7 @@ function myCallback() {
 
   if (x.innerHTML == "Missing " || document.getElementById("section").value == 2) {
     x.innerHTML = "!edit ";
-    x.innerHTML += document.getElementById("reportID").value;
+    x.innerHTML += sanitizeHTML(document.getElementById("reportID").value);
 
     if (document.getElementById("section").value == 1) x.innerHTML += " | short description | ";
     if (document.getElementById("section").value == 2) x.innerHTML += " | Steps to Reproduce | ";
@@ -82,12 +115,12 @@ function myCallback() {
     if (document.getElementById("section").value == 6) x.innerHTML += " | system | ";
 
     if (document.getElementById("section").value == 2) {
-      for (let i = 1; i < amtOfSteps - 1; i++) {
-        if (i == amtOfSteps - 2) x.innerHTML += document.getElementById("stepsToRepro" + i).value;
-        else x.innerHTML += document.getElementById("stepsToRepro" + i).value + " - ";
+      for (let i = 0; i < steps.length; i++) {
+        var lis = document.getElementById("myUL").getElementsByTagName("li");
+        x.innerHTML += sanitizeHTML((lis[i].textContent).replace("×", ""))
       }
 
-    } else x.innerHTML += document.getElementById("newContent").value;
+    } else x.innerHTML += sanitizeHTML(document.getElementById("newContent").value);
 
 
   }

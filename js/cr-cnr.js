@@ -1,3 +1,16 @@
+/*!
+ * Sanitize and encode all HTML in a user-submitted string
+ * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {String} str  The user-submitted string
+ * @return {String} str  The sanitized string
+ */
+var sanitizeHTML = function(str) {
+  var temp = document.createElement('div');
+  temp.textContent = str;
+  return temp.innerHTML;
+};
+
+
 $(document).ready(function() {
   $(".modal").modal();
   $("select").formSelect();
@@ -7,6 +20,8 @@ $(document).ready(function() {
 });
 
 var intervalID = window.setInterval(myCallback, 1000);
+
+
 
 
 function myCallback() {
@@ -22,12 +37,12 @@ function myCallback() {
     if (document.getElementById("crOrCNR").value == 1) x.innerHTML += "canrepro ";
     else x.innerHTML += "cannotrepro ";
 
-    x.innerHTML += document.getElementById("trelloReport").value;
+    x.innerHTML += sanitizeHTML(document.getElementById("trelloReport").value);
 
     x.innerHTML += " | ";
-    x.innerHTML += document.getElementById("clientVers").value;
+    x.innerHTML += sanitizeHTML(document.getElementById("clientVers").value);
     x.innerHTML += ", "
-    x.innerHTML += document.getElementById("systemVers").value;
+    x.innerHTML += sanitizeHTML(document.getElementById("systemVers").value);
   }
 }
 
@@ -35,8 +50,8 @@ var x = window.matchMedia("(max-width: 686px)");
 resize(x);
 x.addListener(resize);
 
-function resize(x){
-  if (x.matches){
+function resize(x) {
+  if (x.matches) {
     var label = document.getElementById("txtLabel");
     label.setAttribute("style", "width: 200px");
   }

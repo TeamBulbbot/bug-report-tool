@@ -22,6 +22,7 @@ function fallbackCopyTextToClipboard(text) {
 
   document.body.removeChild(textArea);
 }
+
 function copyTextToClipboard(text) {
   if (!navigator.clipboard) {
     fallbackCopyTextToClipboard(text);
@@ -32,6 +33,6 @@ function copyTextToClipboard(text) {
 
 var copyBtn = document.getElementById("copy");
 
-copyBtn.addEventListener("click", function (event) {
+copyBtn.addEventListener("click", function(event) {
   copyTextToClipboard(document.getElementById("command").innerHTML);
 });

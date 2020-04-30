@@ -138,11 +138,12 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <div id="steps">
-              <i class="material-icons prefix">mode_edit</i>
-              <label for="stepsToRepro1">Steps to Reproduce</label>
-              <textarea id="stepsToRepro1" class="materialize-textarea" data-length="75" maxlength="75"></textarea>
-            </div>
+            <i class="material-icons prefix" style="size: 5px">create</i>
+            <textarea id="str" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
+            <label for="str">Steps to Reproduce</label>
+            <a onclick="newElement()" class="waves-effect waves-light btn" style="z-index: 0">Add</a>
+            <ul id="myUL" class="collection" style="border:none;">
+            </ul>
           </div>
         </div>
       </form>
