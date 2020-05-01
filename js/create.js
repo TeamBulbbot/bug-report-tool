@@ -131,5 +131,8 @@ function resize(x) {
   if (x.matches) {
     var label = document.getElementById("resize");
     label.setAttribute("style", "width: 300px");
+
+    var label1 = document.getElementById("resize1");
+    label1.setAttribute("style", "width: 300px");
   }
 }
