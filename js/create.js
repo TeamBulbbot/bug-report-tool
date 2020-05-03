@@ -131,10 +131,14 @@ x.addListener(resize);
 
 function resize(x) {
   if (x.matches) {
-    var label = document.getElementById("resize");
-    label.setAttribute("style", "width: 300px");
+    var col = document.getElementsByClassName("input-field col s6");
+    for (var i = 0; i < col.length; i++) {
+      col[i].setAttribute("style", "width: 250px")
+    }
 
-    var label1 = document.getElementById("resize1");
-    label1.setAttribute("style", "width: 300px");
+    var helperText = document.getElementsByClassName("helper-text");
+    for (var i = 0; i < helperText.length; i++){
+      helperText[i].setAttribute("style", "width: 200px; color: #9e9e9e");
+    }
   }
 }
