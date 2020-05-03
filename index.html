@@ -70,6 +70,7 @@
     <div class="callout mbox" style="offset-start: 1cm;">
       <strong>Before we start</strong>
       <ul>
+        <li style="list-style-type: initial; margin-left: 25px;">Make sure you're reliably able to reproduce the issue. If you don't have reliable reproduction steps please contact <a href="https://dis.gd/support" target="_blank">support</a> instead</li>
         <li style="list-style-type: initial; margin-left: 25px;">Make sure to check the relevant Trello board to see if your bug hasn't been already reported.</li>
         <br />
         <li style="list-style-type: initial; margin-left: 25px;">Desktop: <a href="https://trello.com/b/AExxR9lU/canary-bugs" target="_blank">https://trello.com/b/AExxR9lU/canary-bugs</a></li>
@@ -100,6 +101,7 @@
             <i class="material-icons prefix" style="size: 5px">description</i>
             <textarea id="shortDesc" class="materialize-textarea" data-length="150" maxlength="150"></textarea>
             <label for="shortDesc" id="resize">Short Description</label>
+            <span class="helper-text" style="color: #9e9e9e">In a few sentences describe what is your issue. Avoid using word as 'glitch' or 'bug'</span>
           </div>
         </div>
 
@@ -112,6 +114,8 @@
             <i class="material-icons prefix" style="size: 5px">create</i>
             <textarea id="str" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
             <label for="str" id="resize1">Steps to Reproduce</label>
+            <span class="helper-text" style="color: #9e9e9e">Try to make your reproduction steps as easy to follow as possible.</span>
+            <br>
             <a onclick="newElement()" class="waves-effect waves-light btn" style="z-index: 0">Add</a>
             <ul id="myUL" class="collection" style="border:none;">
             </ul>
@@ -127,6 +131,7 @@
             <i class="material-icons prefix">star_border</i>
             <textarea id="expected" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
             <label for="expected">Expected Result</label>
+            <span class="helper-text" style="color: #9e9e9e">Describe what should happen if the bug didn't exist</span>
           </div>
         </div>
       </form>
@@ -138,6 +143,7 @@
             <i class="material-icons prefix">star</i>
             <textarea id="actual" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
             <label for="actual">Actual Result</label>
+            <span class="helper-text" style="color: #9e9e9e">Describe what actually happens if you follow your reproduction steps</span>
           </div>
         </div>
       </form>
@@ -149,6 +155,7 @@
             <i class="material-icons prefix">computer</i>
             <textarea id="clientVers" class="materialize-textarea" data-length="125" maxlength="125"></textarea>
             <label for="clientVers">Client Version</label>
+            <span class="helper-text" style="color: #9e9e9e">Client settings should contain your Discord version. Example: Android Alpha 20.4</span>
           </div>
         </div>
       </form>
@@ -160,6 +167,7 @@
             <i class="material-icons prefix">settings</i>
             <textarea id="systemVers" class="materialize-textarea" data-length="125" maxlength="125"></textarea>
             <label for="systemVers">System Settings</label>
+            <span class="helper-text" style="color: #9e9e9e; ">System Settings should contain your Device model and Android version Example: Xiaomi Redmi 4d, Android 7</span>
           </div>
         </div>
       </form>
@@ -171,7 +179,11 @@
       <br />
     </div>
 
-    <footer>Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a href="https://github.com/KlukCZ" target="_blank">KlukCZ</a></footer>
+    <footer style="text-align: center">
+      Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a href="https://github.com/KlukCZ" target="_blank">KlukCZ</a>
+      <br>
+      Have a feature request or a bug? Post it on our <a href="https://github.com/y3ll0wlife/bug-report-tool/issues" target="_blank">issue tracker</a>!
+    </footer>
 
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

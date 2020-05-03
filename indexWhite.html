@@ -69,6 +69,7 @@
     <div class="callout mbox" style="offset-start: 1cm;">
       <strong>Before we start</strong>
       <ul>
+        <li style="list-style-type: initial; margin-left: 25px;">Make sure you're reliably able to reproduce the issue. If you don't have reliable reproduction steps please contact <a href="https://dis.gd/support" target="_blank">support</a> instead</li>
         <li style="list-style-type: initial; margin-left: 25px;">Make sure to check the relevant Trello board to see if your bug hasn't been already reported.</li>
         <br />
         <li style="list-style-type: initial; margin-left: 25px;">Desktop: <a href="https://trello.com/b/AExxR9lU/canary-bugs" target="_blank">https://trello.com/b/AExxR9lU/canary-bugs</a></li>
@@ -99,6 +100,7 @@
             <i class="material-icons prefix">description</i>
             <textarea id="shortDesc" class="materialize-textarea" data-length="150" maxlength="150"></textarea>
             <label for="shortDesc">Short Description</label>
+            <span class="helper-text" style="color: black">In a few sentences describe what is your issue. Avoid using word as 'glitch' or 'bug'</span>
           </div>
         </div>
       </form>
@@ -111,6 +113,8 @@
             <i class="material-icons prefix" style="size: 5px">create</i>
             <textarea id="str" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
             <label for="str">Steps to Reproduce</label>
+            <span class="helper-text" style="color: black">Try to make your reproduction steps as easy to follow as possible.</span>
+            <br>
             <a onclick="newElement()" class="waves-effect waves-light btn" style="z-index: 0">Add</a>
             <ul id="myUL" class="collection" style="border:none;">
             </ul>
@@ -127,6 +131,7 @@
             <i class="material-icons prefix">star_border</i>
             <textarea id="expected" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
             <label for="expected">Expected Result</label>
+            <span class="helper-text" style="color: black">Describe what should happen if the bug didn't exist</span>
           </div>
         </div>
       </form>
@@ -138,6 +143,7 @@
             <i class="material-icons prefix">star</i>
             <textarea id="actual" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
             <label for="actual">Actual Result</label>
+            <span class="helper-text" style="color: black">Describe what actually happens if you follow your reproduction steps</span>
           </div>
         </div>
       </form>
@@ -149,6 +155,7 @@
             <i class="material-icons prefix">computer</i>
             <textarea id="clientVers" class="materialize-textarea" data-length="125" maxlength="125"></textarea>
             <label for="clientVers">Client Version</label>
+            <span class="helper-text" style="color: black">Client settings should contain your Discord version. Example: Android Alpha 20.4</span>
           </div>
         </div>
       </form>
@@ -160,6 +167,7 @@
             <i class="material-icons prefix">settings</i>
             <textarea id="systemVers" class="materialize-textarea" data-length="125" maxlength="125"></textarea>
             <label for="systemVers">System Settings</label>
+            <span class="helper-text" style="color: black; ">System Settings should contain your Device model and Android version Example: Xiaomi Redmi 4d, Android 7</span>
           </div>
         </div>
       </form>
