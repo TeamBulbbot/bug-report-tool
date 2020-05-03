@@ -102,8 +102,10 @@ function myCallback() {
 
   if (document.getElementById("reportID").value == "") x.innerHTML += "Report ID, ";
   if (document.getElementById("newContent").value == "") x.innerHTML += "New content";
+  document.getElementById("copy").disabled = true;
 
   if (x.innerHTML == "Missing " || document.getElementById("section").value == 2) {
+    document.getElementById("copy").disabled = false;
     x.innerHTML = "!edit ";
     x.innerHTML += sanitizeHTML(document.getElementById("reportID").value);
 

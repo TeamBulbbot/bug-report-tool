@@ -31,8 +31,10 @@ function myCallback() {
   if (document.getElementById("trelloReport").value == "") x.innerHTML += "Trello Link or Report ID, ";
   if (document.getElementById("clientVers").value == "") x.innerHTML += "Client Version, ";
   if (document.getElementById("systemVers").value == "") x.innerHTML += "System Settings";
+  document.getElementById("copy").disabled = true;
 
   if (x.innerHTML == "Missing ") {
+    document.getElementById("copy").disabled = false;
     x.innerHTML = "!";
     if (document.getElementById("crOrCNR").value == 1) x.innerHTML += "canrepro ";
     else x.innerHTML += "cannotrepro ";

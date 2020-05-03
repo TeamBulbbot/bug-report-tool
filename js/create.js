@@ -98,8 +98,10 @@ function myCallback() {
   if (document.getElementById("actual").value == "") x.innerHTML += "Actual Result, ";
   if (document.getElementById("clientVers").value == "") x.innerHTML += "Client Version, ";
   if (document.getElementById("systemVers").value == "") x.innerHTML += "System Settings";
+  document.getElementById("copy").disabled = true;
 
   if (x.innerHTML == "Missing ") {
+    document.getElementById("copy").disabled = false;
     x.innerHTML = "!submit ";
     x.innerHTML += sanitizeHTML(document.getElementById("shortDesc").value + " | "); // Short Desc
     x.innerHTML += "Steps to Reproduce: ";
