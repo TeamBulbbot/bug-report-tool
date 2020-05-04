@@ -61,13 +61,23 @@ function resize(x) {
   }
 }
 
-function switchTheme(){
-  if (localStorage.getItem("theme") === "dark"){
+function switchTheme() {
+  if (localStorage.getItem("theme") === "dark") {
     loadWhiteTheme();
     localStorage.setItem("theme", "white");
-  } else if (localStorage.getItem("theme") === "white"){
+  } else if (localStorage.getItem("theme") === "white") {
     loadDarkTheme();
     localStorage.setItem("theme", "dark");
+  } else {
+    console.error("[Themes] Fatal error occurred while loading theme!");
+  }
+}
+
+function loadATheme() {
+  if (localStorage.getItem("theme") === "white") {
+    loadWhiteTheme();
+  } else if (localStorage.getItem("theme") === "dark") {
+    loadDarkTheme();
   } else {
     console.error("[Themes] Fatal error occurred while loading theme!");
   }
@@ -81,6 +91,7 @@ function loadWhiteTheme() {
   $('h5').css("color", "#000000");
   $('input').css("color", "#000000");
 
+
   $('#strongThemed0').css("color", "#000000");
   $('#strongThemed1').css("color", "#000000");
 
@@ -91,6 +102,21 @@ function loadWhiteTheme() {
   $('#iconThemed2').css("color", "#000000");
   $('#iconThemed3').css("color", "#000000");
   $('#iconThemed4').css("color", "#000000");
+
+  $('#modalColor').css("background-color", "#ffffff");
+
+  $('.boldText').css("font-weight", 700);
+  $('.boldText').css("color", "#000000");
+
+  $('.text').css("color", "#000000");
+
+  $('.settings').css("background-color", "#333740");
+  $('.settings').css("color", "#ffffff");
+  $('.settings').css("padding", "3px");
+
+  $('#modelFooter').css("background-color", "#ffffff");
+  $('#footerText').css("color", "#000000");
+
 }
 
 function loadDarkTheme() {
@@ -111,4 +137,19 @@ function loadDarkTheme() {
   $('#iconThemed2').css("color", "#ffffff");
   $('#iconThemed3').css("color", "#ffffff");
   $('#iconThemed4').css("color", "#ffffff");
+
+  $('#modalColor').css("background-color", "#2c2f33");
+
+  $('.boldText').css("font-weight", 700);
+  $('.boldText').css("color", "#ffffff");
+
+  $('.text').css("color", "#ffffff");
+
+  $('.settings').css("background-color", "#23272a");
+  $('.settings').css("color", "#ffffff");
+  $('.settings').css("padding", "3px");
+
+  $('#modelFooter').css("background-color", "#2c2f33");
+  $('#footerText').css("color", "#ffffff");
+
 }

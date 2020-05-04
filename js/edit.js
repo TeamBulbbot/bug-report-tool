@@ -126,12 +126,22 @@ function myCallback() {
 }
 
 function switchTheme() {
-  if (localStorage.getItem("theme") === "dark"){
+  if (localStorage.getItem("theme") === "dark") {
     loadWhiteTheme();
     localStorage.setItem("theme", "white");
-  } else if (localStorage.getItem("theme") === "white"){
+  } else if (localStorage.getItem("theme") === "white") {
     loadDarkTheme();
     localStorage.setItem("theme", "dark");
+  } else {
+    console.error("[Themes] Fatal error occurred while loading theme!");
+  }
+}
+
+function loadATheme() {
+  if (localStorage.getItem("theme") === "white") {
+    loadWhiteTheme();
+  } else if (localStorage.getItem("theme") === "dark") {
+    loadDarkTheme();
   } else {
     console.error("[Themes] Fatal error occurred while loading theme!");
   }
@@ -153,6 +163,16 @@ function loadDarkTheme() {
   $('#iconThemed1').css("color", "#ffffff");
   $('#iconThemed2').css("color", "#ffffff");
   $('#iconThemed3').css("color", "#ffffff");
+
+  $('#modalColor').css("background-color", "#2c2f33");
+
+  $('.boldText').css("font-weight", 700);
+  $('.boldText').css("color", "#ffffff");
+
+  $('.text').css("color", "#ffffff");
+
+  $('#modelFooter').css("background-color", "#2c2f33");
+  $('#footerText').css("color", "#ffffff");
 }
 
 function loadWhiteTheme() {
@@ -171,4 +191,15 @@ function loadWhiteTheme() {
   $('#iconThemed1').css("color", "#000000");
   $('#iconThemed2').css("color", "#000000");
   $('#iconThemed3').css("color", "#000000");
+
+  $('#modalColor').css("background-color", "#ffffff");
+
+  $('.boldText').css("font-weight", 700);
+  $('.boldText').css("color", "#000000");
+
+  $('.text').css("color", "#000000");
+
+  $('#modelFooter').css("background-color", "#ffffff");
+  $('#footerText').css("color", "#000000");
+
 }
