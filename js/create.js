@@ -87,7 +87,6 @@ function newElement() {
       div.remove()
     }
   }
-
 }
 
 
@@ -165,6 +164,7 @@ function loadWhiteTheme() {
   $('li').css("color", "#000000");
   $('h5').css("color", "#000000");
   $('p').css("color", "#000000");
+  $('textarea').css("color", "#000000");
 
   $('#strongThemed1').css("color", "#000000");
   $('#strongThemed2').css("color", "#000000");
@@ -189,6 +189,7 @@ function loadDarkTheme() {
   $('input').css("color", "#ffffff");
   $('option').css("color", "#ffffff");
   $('p').css("color", "#ffffff");
+  $('textarea').css("color", "#ffffff");
 
   $('#strongThemed1').css("color", "#959c97");
   $('#strongThemed2').css("color", "#959c97");

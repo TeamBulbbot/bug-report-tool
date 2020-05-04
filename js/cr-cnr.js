@@ -90,6 +90,7 @@ function loadWhiteTheme() {
   $('li').css("color", "#000000");
   $('h5').css("color", "#000000");
   $('input').css("color", "#000000");
+  $('textarea').css("color", "#000000");
 
 
   $('#strongThemed0').css("color", "#000000");
@@ -126,6 +127,7 @@ function loadDarkTheme() {
   $('li').css("color", "#959c97");
   $('h5').css("color", "#ffffff");
   $('input').css("color", "#ffffff");
+  $('textarea').css("color", "#ffffff");
 
   $('#strongThemed0').css("color", "#959c97");
   $('#strongThemed1').css("color", "#959c97");

@@ -153,6 +153,7 @@ function loadDarkTheme() {
   $('label').css("color", "#959c97");
   $('li').css("color", "#959c97");
   $('input').css("color", "#ffffff");
+  $('textarea').css("color", "#ffffff");
 
   $('#command').css("color", "#959c97");
 
@@ -181,6 +182,7 @@ function loadWhiteTheme() {
   $('label').css("color", "#000000");
   $('li').css("color", "#000000");
   $('input').css("color", "#000000");
+  $('textarea').css("color", "#000000");
 
   $('#command').css("color", "#000000");
 
