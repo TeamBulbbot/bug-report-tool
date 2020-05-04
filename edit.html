@@ -29,7 +29,7 @@
         <li><a href="index.html"><i class="material-icons left" style="padding-top: 4px">add_box</i>Create</a></li>
         <li><a href="edit.html"><i class="material-icons left" style="padding-top: 4px">update</i>Edit</a></li>
         <li><a href="cnr-cr.html"><i class="material-icons left" style="padding-top: 4px">done_all</i>CR / CNR</a></li>
-        <li><a href="editWhite.html"><i class="material-icons left" style="padding-top: 4px">wb_sunny</i>Change Theme</a></li>
+        <li><a href="javascript:switchTheme()"><i class="material-icons left" style="padding-top: 4px">wb_sunny</i>Change Theme</a></li>
 
       </ul>
     </div>
@@ -38,7 +38,7 @@
     <li><a href="index.html"><i class="material-icons left">add_box</i>Create</a></li>
     <li><a href="edit.html"><i class="material-icons left">update</i>Edit</a></li>
     <li><a href="cnr-cr.html"><i class="material-icons left">done_all</i>CR / CNR</a></li>
-    <li><a href="editWhite.html"><i class="material-icons left">wb_sunny</i>Change Theme</a></li>
+    <li><a href="javascript:switchTheme()"><i class="material-icons left">wb_sunny</i>Change Theme</a></li>
   </ul>
 
   <br>
@@ -46,7 +46,7 @@
     ::before
     <h5 style="padding-top: 20px; padding-left: 5px">Edit a Bug Report</h5>
     <div class="callout mbox" style="offset-start: 1cm">
-      <strong>Alert:</strong>
+      <strong id="strongThemed0">Alert:</strong>
       <ul>
         <li style="list-style-type: initial; margin-left: 25px;">Please note this tool is still using the old
           bot workflow</li>
@@ -56,7 +56,7 @@
     </div>
     <br />
     <div class="callout mbox" style="offset-start: 1cm">
-      <strong>Before we start</strong>
+      <strong id="strongThemed1">Before we start</strong>
       <ul>
         <li style="list-style-type: initial; margin-left: 25px">Please prepare your report ID</li>
         <li style="list-style-type: initial; margin-left: 25px">You can find your report ID in <strong class="channel">#bug-approval-queue</strong> at the end of your report
@@ -109,7 +109,7 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s12">
-            <i class="material-icons prefix">description</i>
+            <i class="material-icons prefix" id="iconThemed0">description</i>
             <select id="section">
               <option value="1">Short Description</option>
               <option value="2">Steps to Reproduce</option>
@@ -129,7 +129,7 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <i class="material-icons prefix">polymer</i>
+            <i class="material-icons prefix" id="iconThemed1">polymer</i>
             <textarea id="reportID" class="materialize-textarea" data-length="6" maxlength="6"></textarea>
             <label for="reportID" id="txtLabel">Report ID</label>
           </div>
@@ -141,7 +141,7 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <i class="material-icons prefix">edit</i>
+            <i class="material-icons prefix" id="iconThemed2">edit</i>
             <textarea id="newContent" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
             <label for="newContent">New content</label>
           </div>
@@ -153,7 +153,7 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <i class="material-icons prefix" style="size: 5px">create</i>
+            <i class="material-icons prefix" style="size: 5px" id="iconThemed3">create</i>
             <textarea id="str" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
             <label for="str">Steps to Reproduce</label>
             <a onclick="newElement()" class="waves-effect waves-light btn" style="z-index: 0">Add</a>
@@ -174,7 +174,10 @@
 
 
 
-    <footer>Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a href="https://github.com/KlukCZ" target="_blank">KlukCZ</a>
+    <footer style="text-align: center">
+      Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a href="https://github.com/KlukCZ" target="_blank">KlukCZ</a>
+      <br>
+      Have a feature request or a bug? Post it on our <a href="https://github.com/y3ll0wlife/bug-report-tool/issues" target="_blank">issue tracker</a>!
     </footer>
 
     <!-- Javascript -->
