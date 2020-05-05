@@ -107,8 +107,12 @@ function myCallback() {
   missing = missing.substring(0, missing.length - 2);
   x.innerHTML = missing;
 
+  if (document.getElementById("section").value == 2 && document.getElementById("myUL").getElementsByTagName("li").length != 0) x.innerHTML = "Missin"
 
-  if (x.innerHTML == "Missin" || document.getElementById("section").value == 2) {
+
+  if (x.innerHTML == "Missin") {
+
+
     document.getElementById("copy").disabled = false;
     x.innerHTML = "!edit ";
     x.innerHTML += sanitizeHTML(document.getElementById("reportID").value);
