@@ -12,10 +12,25 @@
   <link rel='stylesheet' href="css/edit.css" />
   <link rel="shortcut icon" href="images/icon.ico" />
 
+    <script>
+        function checkTheme() {
+            if (localStorage.getItem("theme") === null){
+                localStorage.setItem("theme", "dark");
+                return;
+            }
 
+            if (localStorage.getItem("theme") === "dark"){
+                loadDarkTheme();
+            } else if (localStorage.getItem("theme") === "white"){
+                loadWhiteTheme();
+            } else {
+                console.error("[Themes] Fatal error occurred while loading theme!");
+            }
+        }
+    </script>
 </head>
 
-<body onload="javascript:loadATheme()">
+<body onload="checkTheme();">
   <nav class="navColor" style="padding: 0px 5px; position: fixed; z-index: 2">
     <div class="nav-bar">
       <a href="#" class="brand-logo" id="titleText"><i class="material-icons left" style="padding-top: 3px; padding-left: 7px">bug_report</i>

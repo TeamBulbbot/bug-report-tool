@@ -17,8 +17,6 @@ $(document).ready(function() {
   $("textarea#trelloReport, textarea#clientVers, textarea#systemVers").characterCounter();
   $(".dropdown-trigger").dropdown();
   $(".sidenav").sidenav();
-
-  localStorage.setItem("theme", "dark");
 });
 
 var intervalID = window.setInterval(myCallback, 1000);

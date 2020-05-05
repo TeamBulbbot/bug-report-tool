@@ -12,9 +12,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
+
+  <script>
+    function checkTheme() {
+
+      if (localStorage.getItem("theme") === null){
+        localStorage.setItem("theme", "dark");
+        return;
+      }
+
+      if (localStorage.getItem("theme") === "dark"){
+        loadDarkTheme();
+      } else if (localStorage.getItem("theme") === "white"){
+        loadWhiteTheme();
+      } else {
+        console.error("[Themes] Fatal error occurred while loading theme!");
+      }
+    }
+  </script>
 </head>
 
-<body>
+<body onload="checkTheme();">
   <nav class="navColor" style="padding: 0px 5px; position: fixed; z-index: 1">
     <div class="nav-bar" style="position: center">
       <a href="#" class="brand-logo" id="titleText"><i class="material-icons left" style="padding-left: 7px;">bug_report</i> DTesters Bug Tool</a>

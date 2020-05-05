@@ -17,8 +17,6 @@ $(document).ready(function() {
   $("select").formSelect();
   $("textarea#shortDesc, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
   $(".dropdown-trigger").dropdown();
-
-  localStorage.setItem("theme", "dark");
 });
 
 var callback = window.setInterval(myCallback, 200);
@@ -203,4 +201,3 @@ function loadDarkTheme() {
   $('#iconThemed4').css("color", "#ffffff");
   $('#iconThemed5').css("color", "#ffffff");
 }
-

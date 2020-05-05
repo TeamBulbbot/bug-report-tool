@@ -17,8 +17,6 @@ $(document).ready(function() {
   $("select").formSelect();
   $(".dropdown-trigger").dropdown();
   $("textarea#reportID, textarea#newContent, textarea#stepsToRepro1").characterCounter();
-
-  localStorage.setItem("theme", "dark");
 });
 
 var intervalID = window.setInterval(myCallback, 1000);
