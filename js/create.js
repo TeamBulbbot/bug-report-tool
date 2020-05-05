@@ -17,6 +17,8 @@ $(document).ready(function() {
   $("select").formSelect();
   $("textarea#shortDesc, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
   $(".dropdown-trigger").dropdown();
+
+  localStorage.setItem("theme", "dark");
 });
 
 var callback = window.setInterval(myCallback, 200);
@@ -90,16 +92,23 @@ function newElement() {
 
 function myCallback() {
   var x = document.getElementById("command");
-  x.innerHTML = "Missing ";
-  if (document.getElementById("shortDesc").value == "") x.innerHTML += "Short Description, ";
-  if (steps.length == 0) x.innerHTML += "Steps to Reproduce, ";
-  if (document.getElementById("expected").value == "") x.innerHTML += "Expected Result, ";
-  if (document.getElementById("actual").value == "") x.innerHTML += "Actual Result, ";
-  if (document.getElementById("clientVers").value == "") x.innerHTML += "Client Version, ";
-  if (document.getElementById("systemVers").value == "") x.innerHTML += "System Settings";
+  let missing = "Missing "
+  if (document.getElementById("shortDesc").value == "") missing += "Short-Description#";
+  if (steps.length == 0) missing += "Steps-to-Reproduce#";
+  if (document.getElementById("expected").value == "") missing += "Expected-Result#";
+  if (document.getElementById("actual").value == "") missing += "Actual-Result#";
+  if (document.getElementById("clientVers").value == "") missing += "Client-Version#";
+  if (document.getElementById("systemVers").value == "") missing += "System-Settings#";
+
+  missing = missing.split("#").join(", ");
+  missing = missing.split("-").join(" ")
+  missing = missing.substring(0, missing.length - 2);
+  x.innerHTML = missing;
+
+
   document.getElementById("copy").disabled = true;
 
-  if (x.innerHTML == "Missing ") {
+  if (x.innerHTML == "Missin") {
     document.getElementById("copy").disabled = false;
     x.innerHTML = "!submit ";
     x.innerHTML += sanitizeHTML(document.getElementById("shortDesc").value + " | "); // Short Desc
@@ -136,17 +145,17 @@ function resize(x) {
     }
 
     var helperText = document.getElementsByClassName("helper-text");
-    for (var i = 0; i < helperText.length; i++){
+    for (var i = 0; i < helperText.length; i++) {
       helperText[i].setAttribute("style", "width: 200px; color: #9e9e9e");
     }
   }
 }
 
-function switchTheme(){
-  if (localStorage.getItem("theme") === "dark"){
+function switchTheme() {
+  if (localStorage.getItem("theme") === "dark") {
     loadWhiteTheme();
     localStorage.setItem("theme", "white");
-  } else if (localStorage.getItem("theme") === "white"){
+  } else if (localStorage.getItem("theme") === "white") {
     loadDarkTheme();
     localStorage.setItem("theme", "dark");
   } else {

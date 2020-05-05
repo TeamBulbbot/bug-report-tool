@@ -95,13 +95,20 @@ function newElement() {
 
 function myCallback() {
   var x = document.getElementById("command");
-  x.innerHTML = "Missing ";
+  let missing = "Missing "
 
-  if (document.getElementById("reportID").value == "") x.innerHTML += "Report ID, ";
-  if (document.getElementById("newContent").value == "") x.innerHTML += "New content";
+  if (document.getElementById("reportID").value == "") missing += "Report-ID#";
+  if (document.getElementById("newContent").value == "") missing += "New-content#";
   document.getElementById("copy").disabled = true;
 
-  if (x.innerHTML == "Missing " || document.getElementById("section").value == 2) {
+
+  missing = missing.split("#").join(", ");
+  missing = missing.split("-").join(" ")
+  missing = missing.substring(0, missing.length - 2);
+  x.innerHTML = missing;
+
+
+  if (x.innerHTML == "Missin" || document.getElementById("section").value == 2) {
     document.getElementById("copy").disabled = false;
     x.innerHTML = "!edit ";
     x.innerHTML += sanitizeHTML(document.getElementById("reportID").value);
