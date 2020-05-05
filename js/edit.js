@@ -107,7 +107,9 @@ function myCallback() {
   missing = missing.substring(0, missing.length - 2);
   x.innerHTML = missing;
 
-  if (document.getElementById("section").value == 2 && document.getElementById("myUL").getElementsByTagName("li").length != 0) x.innerHTML = "Missin"
+  if (document.getElementById("section").value == 2 &&
+    document.getElementById("myUL").getElementsByTagName("li").length != 0 &&
+    document.getElementById("reportID").value != "") x.innerHTML = "Missin"
 
 
   if (x.innerHTML == "Missin") {
