@@ -136,27 +136,6 @@ function myCallback() {
   }
 }
 
-function switchTheme() {
-  if (localStorage.getItem("theme") === "dark") {
-    loadWhiteTheme();
-    localStorage.setItem("theme", "white");
-  } else if (localStorage.getItem("theme") === "white") {
-    loadDarkTheme();
-    localStorage.setItem("theme", "dark");
-  } else {
-    console.error("[Themes] Fatal error occurred while loading theme!");
-  }
-}
-
-function loadATheme() {
-  if (localStorage.getItem("theme") === "white") {
-    loadWhiteTheme();
-  } else if (localStorage.getItem("theme") === "dark") {
-    loadDarkTheme();
-  } else {
-    console.error("[Themes] Fatal error occurred while loading theme!");
-  }
-}
 
 function loadDarkTheme() {
   $('body').css("background-color", "#2c2f33");
