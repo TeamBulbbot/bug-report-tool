@@ -166,6 +166,10 @@ function loadWhiteTheme() {
   $('#strongThemed1').css("color", "#000000");
   $('#strongThemed2').css("color", "#000000");
 
+  $(".modal-content").css("background-color", "#ffffff");
+  $(".modal-footer").css("background-color", "#ffffff");
+  $(".footerText").css("color", "#000000");
+
   $('#command').css("color", "#000000");
 
   $('#iconThemed0').css("color", "#000000");
@@ -190,6 +194,14 @@ function loadDarkTheme() {
 
   $('#strongThemed1').css("color", "#959c97");
   $('#strongThemed2').css("color", "#959c97");
+
+  $(".modal-content").css("background-color", "#2c2f33");
+  $(".modal-footer").css("background-color", "#2c2f33");
+  $(".footerText").css("color", "#ffffff");
+
+  $(".modal-content").css("background-color", "#2c2f33");
+  $(".modal-footer").css("background-color", "#2c2f33");
+  $(".footerText").css("color", "#ffffff");
 
   $('#command').css("color", "#959c97");
 
