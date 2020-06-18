@@ -4,18 +4,18 @@
  * @param  {String} str  The user-submitted string
  * @return {String} str  The sanitized string
  */
-var sanitizeHTML = function (str) {
+var sanitizeHTML = function(str) {
   var temp = document.createElement("div");
   temp.textContent = str;
   return temp.innerHTML;
 };
 
-$(document).ready(function () {
+$(document).ready(function() {
   $(".sidenav").sidenav();
   $(".modal").modal();
   $("select").formSelect();
   $(".dropdown-trigger").dropdown();
-  $("textarea#reportID, textarea#newContent, textarea#stepsToRepro1").characterCounter();
+  $("textarea#reportID, textarea#newContent, textarea#str").characterCounter();
 });
 
 var intervalID = window.setInterval(myCallback, 1000);
@@ -46,7 +46,7 @@ for (i = 0; i < steps.length; i++) {
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
+  close[i].onclick = function() {
     var div = this.parentElement;
     div.remove();
   };
@@ -75,7 +75,7 @@ function newElement() {
   li.appendChild(span);
 
   for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
+    close[i].onclick = function() {
       var div = this.parentElement;
       div.remove();
     };
