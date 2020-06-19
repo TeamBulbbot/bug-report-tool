@@ -15,7 +15,7 @@ $(document).ready(function() {
   $(".sidenav").sidenav();
   $(".modal").modal();
   $("select").formSelect();
-  $("textarea#shortDesc, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
+  $("textarea#shortDesc, textarea#str, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
   $(".dropdown-trigger").dropdown();
 
   localStorage.setItem("theme", "dark");
