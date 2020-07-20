@@ -15,7 +15,7 @@ $(document).ready(function() {
   $(".modal").modal();
   $("select").formSelect();
   $(".dropdown-trigger").dropdown();
-  $("textarea#reportID, textarea#newContent, textarea#str").characterCounter();
+  $("textarea#reportID, textarea#newContent, textarea#stepsToRepro1").characterCounter();
 });
 
 var intervalID = window.setInterval(myCallback, 1000);
@@ -102,17 +102,19 @@ function myCallback() {
     x.innerHTML = "!edit ";
     x.innerHTML += sanitizeHTML(document.getElementById("reportID").value);
 
-    if (document.getElementById("section").value == 1) x.innerHTML += " | short description | ";
-    if (document.getElementById("section").value == 2) x.innerHTML += " | Steps to Reproduce |";
-    if (document.getElementById("section").value == 3) x.innerHTML += " | expected | ";
-    if (document.getElementById("section").value == 4) x.innerHTML += " | actual | ";
-    if (document.getElementById("section").value == 5) x.innerHTML += " | client | ";
-    if (document.getElementById("section").value == 6) x.innerHTML += " | system | ";
+    if (document.getElementById("section").value == 1) x.innerHTML += " -t "; // Title
+    if (document.getElementById("section").value == 2) x.innerHTML += " -r "; // Repro stesps (STR)
+    if (document.getElementById("section").value == 3) x.innerHTML += " -e "; // Expected
+    if (document.getElementById("section").value == 4) x.innerHTML += " -a "; // Actual
+    if (document.getElementById("section").value == 5) x.innerHTML += " -c "; // Client
+    if (document.getElementById("section").value == 6) x.innerHTML += " -s "; // System
 
     if (document.getElementById("section").value == 2) {
       for (let i = 0; i < steps.length; i++) {
         var lis = document.getElementById("myUL").getElementsByTagName("li");
-        x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").slice(0, -1));
+        //x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").slice(0, -1));
+        if (i == 0) x.innerHTML += sanitizeHTML((lis[i].textContent).replace("×", "").replace("-", ""))
+        else x.innerHTML += sanitizeHTML((lis[i].textContent).replace("×", "").replace("-", "~"))
       }
     } else x.innerHTML += sanitizeHTML(document.getElementById("newContent").value);
   }
@@ -140,6 +142,12 @@ function loadDarkTheme() {
 
   $(".boldText").css("font-weight", 700);
   $(".boldText").css("color", "#ffffff");
+
+  $(".fieldTitle").css("font-size", 15);
+  $(".fieldTitle").css("color", "#646f6a");
+
+  $(".fieldItem").css("font-size", 13);
+  $(".fieldItem").css("color", "#ffffff");
 
   $(".text").css("color", "#ffffff");
 
@@ -169,6 +177,12 @@ function loadWhiteTheme() {
 
   $(".boldText").css("font-weight", 700);
   $(".boldText").css("color", "#000000");
+
+  $(".fieldTitle").css("font-size", 15);
+  $(".fieldTitle").css("color", "#646f6a");
+
+  $(".fieldItem").css("font-size", 13);
+  $(".fieldItem").css("color", "#000000");
 
   $(".text").css("color", "#000000");
 

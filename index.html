@@ -17,7 +17,7 @@
 
 <body onload="checkTheme();">
   <nav class="navColor" style="padding: 0px 5px; position: fixed; z-index: 1">
-    <div class="nav-bar" style="position: center">
+    <div class="nav-bar">
       <a href="#" class="brand-logo" id="titleText"><i class="material-icons left" style="padding-left: 7px;">bug_report</i> DTesters Bug Tool</a>
 
       <a href="#" class="sidenav-trigger" data-target="mobile-nav">
@@ -59,32 +59,23 @@
   <div class="column row" id="content">
     ::before
     <h5 style="padding-top: 20px; padding-left: 5px;">Create a Bug Report</h5>
-    <div class="callout mbox" style="offset-start: 1cm;">
-      <strong id="strongThemed1">Alert:</strong>
-      <ul>
-        <li style="list-style-type: initial; margin-left: 25px;">Please note this tool is still using the old bot workflow</li>
-        <li style="list-style-type: initial; margin-left: 25px;">The workflow will be updated once the server revamp comes out</li>
-      </ul>
-    </div>
-    <br />
+   
+    <br>
+ 
 
     <div class="callout mbox" style="offset-start: 1cm;">
       <strong id="strongThemed2">Before we start</strong>
       <ul>
         <li style="list-style-type: initial; margin-left: 25px;">Make sure you're reliably able to reproduce the issue. If you don't have reliable reproduction steps please contact <a href="https://dis.gd/support" target="_blank">support</a> instead
         </li>
-        <li style="list-style-type: initial; margin-left: 25px;">Make sure to check the relevant Trello board to see if your bug hasn't been already reported.</li>
+        <li style="list-style-type: initial; margin-left: 25px;">Make sure to check the relevant Discord Bugs board to see if your bug hasn't been already reported.</li>
         <br />
-        <li style="list-style-type: initial; margin-left: 25px;">Desktop: <a href="https://trello.com/b/AExxR9lU/canary-bugs" target="_blank">https://trello.com/b/AExxR9lU/canary-bugs</a></li>
-        <li style="list-style-type: initial; margin-left: 25px;">Android: <a href="https://trello.com/b/Vqrkz3KO/android-beta-bugs" target="_blank">https://trello.com/b/Vqrkz3KO/android-beta-bugs</a></li>
-        <li style="list-style-type: initial; margin-left: 25px;">IOS: <a href="https://trello.com/b/vLPlnX60/ios-testflight-bugs" target="_blank">https://trello.com/b/vLPlnX60/ios-testflight-bugs</a></li>
-        <li style="list-style-type: initial; margin-left: 25px;">Store: <a href="https://trello.com/b/Fb0LyRnD/store-bugs" target="_blank">https://trello.com/b/Fb0LyRnD/store-bugs</a></li>
-        <li style="list-style-type: initial; margin-left: 25px;">Website: <a href="https://trello.com/b/3ubHh1rm/website-bug-board" target="_blank">https://trello.com/b/3ubHh1rm/website-bug-board</a></li>
-        <li style="list-style-type: initial; margin-left: 25px;">Overlay: <a href="https://trello.com/b/k6jr4NyY/overlay-bugs" target="_blank">https://trello.com/b/k6jr4NyY/overlay-bugs</a></li>
-
+    
+        <li style="list-style-type: initial; margin-left: 25px;">Discord Bugs: <a href="https://bugs.discord.com/project/" target="_blank">https://bugs.discord.com/project/</a></li>
+       
         <br />
 
-        <li style="list-style-type: initial; margin-left: 25px;">If you didn't find it to be reported on Trello you can also use the relevent report channel and use the search command inside of Discord.</li>
+        <li style="list-style-type: initial; margin-left: 25px;">If you didn't find it to be reported on Discord Bugs you can also use the relevent report channel and use the search command inside of Discord.</li>
         <li style="list-style-type: initial; margin-left: 25px;">Please note that this site will NOT submit the bug for you.</li>
         <li style="list-style-type: initial; margin-left: 25px;">
           If you want to attach an image/video to your report please ask a
@@ -93,6 +84,7 @@
           <strong class="helper">Jr. Mod</strong>
           to attach it for you
         </li>
+
         <br />
         <li style="list-style-type: initial; margin-left: 25px;">How can I get my client version and system settings</li>
         <a class="waves-effect waves-light btn modal-trigger btn-small" style="background-color: #7289da; z-index: 0" href="#modalWin">Windows</a>
@@ -110,7 +102,7 @@
       <div class="modal-content" class="modalColor">
         <div style="display: flex; align-items:center;">
           <img src="images/windows.png" alt="Windows" style=" border-radius: 50%; height: 50px; width: 50px">
-          <strong style=" font-size: 20px; margin-left: 10px" class="boldText">Windows</strong>
+          <strong style=" font-size: 20px; margin-left: 10px" class="blurple">Windows</strong>
         </div>
 
         <h6 class="text">How do you get your Windows Version</h6>
@@ -143,7 +135,7 @@
       <div class="modal-content" class="modalColor">
         <div style="display: flex; align-items:center;">
           <img src="images/apple.png" alt="Mac" style=" border-radius: 50%; height: 50px; width: 50px">
-          <strong style=" font-size: 20px; margin-left: 10px" class="boldText">Mac</strong>
+          <strong style=" font-size: 20px; margin-left: 10px" class="blurple">Mac</strong>
         </div>
 
         <h6 class="text">How do you get your Mac Version</h6>
@@ -174,7 +166,7 @@
       <div class="modal-content" class="modalColor">
         <div style="display: flex; align-items:center;">
           <img src="images/android.png" alt="Android" style=" border-radius: 50%; height: 50px; width: 50px">
-          <strong style=" font-size: 20px; margin-left: 10px" class="boldText">Android</strong>
+          <strong style=" font-size: 20px; margin-left: 10px" class="blurple">Android</strong>
         </div>
 
         <h6 class="text">How do you get your Android Version</h6>
@@ -207,7 +199,7 @@
       <div class="modal-content" class="modalColor">
         <div style="display: flex; align-items:center;">
           <img src="images/apple.png" alt="IOS" style=" border-radius: 50%; height: 50px; width: 50px">
-          <strong style=" font-size: 20px; margin-left: 10px" class="boldText">IOS</strong>
+          <strong style=" font-size: 20px; margin-left: 10px" class="blurple">IOS</strong>
         </div>
 
         <h6 class="text">How do you get your iPhone Version</h6>
@@ -225,7 +217,7 @@
           <li style="list-style-type: auto;">Go to the <strong class="blurple">User Settings</strong> and scroll down</li>
           <li style="list-style-type: auto;">For TestFlight users open up the TestFlight application</li>
 
-          <img src="images/discordVerIos.jpg" alt="Discord Version Image" style=" width: 80%; height: auto;">
+          <img src="images/DiscordVerIos.jpg" alt="Discord Version Image" style=" width: 80%; height: auto;">
         </ol>
         <br />
 
@@ -240,7 +232,7 @@
       <div class="modal-content" class="modalColor">
         <div style="display: flex; align-items:center;">
           <img src="images/browser.png" alt="Browser" style=" border-radius: 50%; height: 50px; width: 50px">
-          <strong style=" font-size: 20px; margin-left: 10px" class="boldText">Browser</strong>
+          <strong style=" font-size: 20px; margin-left: 10px" class="blurple">Browser</strong>
         </div>
 
         <h6 class="text">How do you get your Browser Version</h6>
@@ -287,12 +279,12 @@
           <li style="list-style-type: auto;">Refresh the website </li>
 
           <li style="list-style-type: auto;">Open up the developer console </li>
-          <li style="list-style-type: auto;">Chrome (Windows): Control + Shift + J, (Mac): Control + Option + J</li>
-          <li style="list-style-type: auto;">Firefox (Windows): Control + Shift + K, (Mac): Control + Option + K</li>
+          <li style="list-style-type: auto;">Chrome (Windows): Control + Shift + J, Chrome (Mac): Control + Option + J</li>
+          <li style="list-style-type: auto;">Firefox (Windows): Control + Shift + K, Chrome (Mac): Control + Option + K</li>
           <li style="list-style-type: auto;">Edge: F12</li>
           <li style="list-style-type: auto;">Safari: Inside of the Develop tab, press <strong class="blurple">Show JavaScript Console</strong> (You will need to enable developer mode for this)</li>
 
-          <li style="list-style-type: auto;">Inside of that write <strong class="boldText">Build</strong> </li>
+          <li style="list-style-type: auto;">Inside of that write <strong class="blurple">Build</strong> </li>
           <img src="images/DiscordVer.png" alt="Discord Version Image" style=" width: 80%; height: auto;">
         </ol>
         <br />
@@ -326,13 +318,12 @@
             <textarea id="str" class="materialize-textarea" data-length="175" maxlength="175"></textarea>
             <label for="str" id="resize1">Steps to Reproduce</label>
             <span class="helper-text" style="color: #9e9e9e">Try to make your reproduction steps as easy to follow as possible.</span>
-
-
+            <br>
+            <a onclick="newElement()" class="waves-effect waves-light btn" style="z-index: 0; background-color: #7289da">Add</a>
+            <ul id="myUL" class="collection" style="border:none;">
+            </ul>
           </div>
-          <a onclick="newElement()" class="waves-effect waves-light btn" style="z-index: 0; background-color: #7289da; margin-bottom: -50px">Add</a>
         </div>
-        <ul id="myUL" class="collection" style="border:none;">
-        </ul>
       </form>
     </div>
 
@@ -394,7 +385,7 @@
     <footer style="text-align: center">
       Created by <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and <a href="https://github.com/KlukCZ" target="_blank">KlukCZ</a>
       <br>
-      Have a feature request or a bug? Post it on our <a href="https://github.com/y3ll0wlife/bug-report-tool/issues" target="_blank">issue tracker</a>!
+      Have a feature request or a bug? Post it on our <a href="https://github.com/TestersQTs/bug-report-tool/issues" target="_blank">issue tracker</a>!
     </footer>
 
     <!-- Javascript -->

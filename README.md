@@ -9,22 +9,20 @@
 
 ### 🌐 [Website](https://y3ll0wlife.github.io/bug-report-tool/)
 
-
 ## Author(s)
+
 👤 **KlukCZ**
 
-* Website: http://klukcz.me/
-* Twitter: [@KlukCZ](https://twitter.com/KlukCZ)
-* Github: [@KlukCZ](https://github.com/KlukCZ)
-* Discord: KlukCZ#6589
-
+- Twitter: [@KlukCZ](https://twitter.com/KlukCZ)
+- Github: [@KlukCZ](https://github.com/KlukCZ)
+- Discord: KlukCZ#6589
 
 👤 **y3ll0w**
 
-* Website: http://y3ll0w.tech
-* Twitter: [@y3ll0wLife](https://twitter.com/y3ll0wLife)
-* Github: [@y3ll0wlife](https://github.com/y3ll0wlife)
-* Discord: mrphilip#0882
+- Website: http://y3ll0w.tech
+- Twitter: [@y3ll0wLife](https://twitter.com/y3ll0wLife)
+- Github: [@y3ll0wlife](https://github.com/y3ll0wlife)
+- Discord: mrphilip#0882
 
 ## 🤝 Contributing
 
@@ -36,10 +34,10 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2020 [y3ll0w](https://github.com/y3ll0wlife).<br />
+Copyright © 2020 [y3ll0w](https://github.com/y3ll0wlife) / [KlukCZ](https://github.com/KlukCZ).<br />
 This project is [MIT](https://github.com/y3ll0wlife/bug-report-tool/blob/master/LICENSE) licensed.
 
-***
+---
 
 <!---
 This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)

@@ -46,7 +46,7 @@ function myCallback() {
 
     x.innerHTML += sanitizeHTML(document.getElementById("trelloReport").value);
 
-    x.innerHTML += " | ";
+    x.innerHTML += " ";
     x.innerHTML += sanitizeHTML(document.getElementById("clientVers").value);
     x.innerHTML += ", "
     x.innerHTML += sanitizeHTML(document.getElementById("systemVers").value);
@@ -91,6 +91,13 @@ function loadWhiteTheme() {
   $('.boldText').css("font-weight", 700);
   $('.boldText').css("color", "#000000");
 
+  $(".fieldTitle").css("font-size", 15);
+  $(".fieldTitle").css("color", "#646f6a");
+
+  $(".fieldItem").css("font-size", 13);
+  $(".fieldItem").css("color", "#000000");
+
+
   $('.text').css("color", "#000000");
 
   $('.settings').css("background-color", "#333740");
@@ -126,6 +133,16 @@ function loadDarkTheme() {
 
   $('.boldText').css("font-weight", 700);
   $('.boldText').css("color", "#ffffff");
+
+  $('.boldLink').css("font-weight", 700);
+  $('.boldLink').css("color", "#00aff2");
+
+  $(".fieldTitle").css("font-size", 15);
+  $(".fieldTitle").css("color", "#646f6a");
+
+  $(".fieldItem").css("font-size", 13);
+  $(".fieldItem").css("color", "#ffffff");
+
 
   $('.text').css("color", "#ffffff");
 

@@ -15,8 +15,9 @@ $(document).ready(function() {
   $(".sidenav").sidenav();
   $(".modal").modal();
   $("select").formSelect();
-  $("textarea#shortDesc, textarea#str, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
+  $("textarea#shortDesc, textarea#expected, textarea#actual, textarea#clientVers, textarea#systemVers").characterCounter();
   $(".dropdown-trigger").dropdown();
+
 
   localStorage.setItem("theme", "dark");
 });
@@ -111,24 +112,33 @@ function myCallback() {
   if (x.innerHTML == "Missin") {
     document.getElementById("copy").disabled = false;
     x.innerHTML = "!submit ";
-    x.innerHTML += sanitizeHTML(document.getElementById("shortDesc").value + " | "); // Short Desc
-    x.innerHTML += "Steps to Reproduce: ";
 
+    // Title
+    x.innerHTML += "-t "
+    x.innerHTML += sanitizeHTML(document.getElementById("shortDesc").value);
+
+    // Reproduction steps (STR)
+    x.innerHTML += " -r ";
     for (let i = 0; i < steps.length; i++) {
       var lis = document.getElementById("myUL").getElementsByTagName("li");
-      x.innerHTML += sanitizeHTML((lis[i].textContent).replace("×", ""))
+      if (i == 0) x.innerHTML += sanitizeHTML((lis[i].textContent).replace("×", "").replace("-", ""))
+      else x.innerHTML += sanitizeHTML((lis[i].textContent).replace("×", "").replace("-", "~"))
     }
 
-    x.innerHTML += " Expected Result: ";
+    // Expected Result
+    x.innerHTML += " -e ";
     x.innerHTML += sanitizeHTML(document.getElementById("expected").value);
 
-    x.innerHTML += " Actual Result: ";
+    // Actual Result
+    x.innerHTML += " -a ";
     x.innerHTML += sanitizeHTML(document.getElementById("actual").value);
 
-    x.innerHTML += " Client Settings: ";
+    // Client Settings (Discord Build)
+    x.innerHTML += " -c ";
     x.innerHTML += sanitizeHTML(document.getElementById("clientVers").value);
 
-    x.innerHTML += " System Settings: ";
+    // System Settings
+    x.innerHTML += " -s ";
     x.innerHTML += sanitizeHTML(document.getElementById("systemVers").value);
   }
 }
@@ -195,13 +205,12 @@ function loadDarkTheme() {
   $('#strongThemed1').css("color", "#959c97");
   $('#strongThemed2').css("color", "#959c97");
 
-  $(".modal-content").css("background-color", "#2c2f33");
-  $(".modal-footer").css("background-color", "#2c2f33");
-  $(".footerText").css("color", "#ffffff");
 
   $(".modal-content").css("background-color", "#2c2f33");
   $(".modal-footer").css("background-color", "#2c2f33");
   $(".footerText").css("color", "#ffffff");
+
+
 
   $('#command').css("color", "#959c97");
 

@@ -15,17 +15,15 @@
 body {
   background-color: #2c2f33;
 }
-
+.blurple {
+  color: #7289da;
+}
 .bh {
   color: #e22d2d;
 }
 
 .helper {
   color: #13aae6;
-}
-
-.blurple {
-  color: #7289da;
 }
 
 .material-icons {
