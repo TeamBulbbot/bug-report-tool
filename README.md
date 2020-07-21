@@ -7,7 +7,7 @@
 
 > A way for Discord Bug hunters to create tickets more efficiently
 
-### 🌐 [Website](https://y3ll0wlife.github.io/bug-report-tool/)
+### 🌐 [Website](https://testersqts.github.io/bug-report-tool/index.html)
 
 ## Author(s)
 
