@@ -4,13 +4,13 @@
  * @param  {String} str  The user-submitted string
  * @return {String} str  The sanitized string
  */
-var sanitizeHTML = function(str) {
+var sanitizeHTML = function (str) {
   var temp = document.createElement("div");
   temp.textContent = str;
   return temp.innerHTML;
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   $(".sidenav").sidenav();
   $(".modal").modal();
   $("select").formSelect();
@@ -46,7 +46,7 @@ for (i = 0; i < steps.length; i++) {
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
+  close[i].onclick = function () {
     var div = this.parentElement;
     div.remove();
   };
@@ -75,7 +75,7 @@ function newElement() {
   li.appendChild(span);
 
   for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
+    close[i].onclick = function () {
       var div = this.parentElement;
       div.remove();
     };
@@ -113,8 +113,8 @@ function myCallback() {
       for (let i = 0; i < steps.length; i++) {
         var lis = document.getElementById("myUL").getElementsByTagName("li");
         //x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").slice(0, -1));
-        if (i == 0) x.innerHTML += sanitizeHTML((lis[i].textContent).replace("×", "").replace("-", ""))
-        else x.innerHTML += sanitizeHTML((lis[i].textContent).replace("×", "").replace("-", "~"))
+        if (i == 0) x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").replace("-", ""));
+        else x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").replace("-", "~"));
       }
     } else x.innerHTML += sanitizeHTML(document.getElementById("newContent").value);
   }
@@ -133,10 +133,19 @@ function loadDarkTheme() {
   $("#strongThemed0").css("color", "#959c97");
   $("#strongThemed1").css("color", "#959c97");
 
+  $(".modal-content").css("background-color", "#2c2f33");
+  $(".modal-footer").css("background-color", "#2c2f33");
+  $(".footerText").css("color", "#ffffff");
+
   $("#iconThemed0").css("color", "#ffffff");
   $("#iconThemed1").css("color", "#ffffff");
   $("#iconThemed2").css("color", "#ffffff");
   $("#iconThemed3").css("color", "#ffffff");
+
+  $("#iconThemedWindows").css("color", "#ffffff");
+  $("#iconThemedAndroid").css("color", "#ffffff");
+  $("#iconThemediOS").css("color", "#ffffff");
+  $("#iconThemedBrowswer").css("color", "#ffffff");
 
   $("#modalColor").css("background-color", "#2c2f33");
 
@@ -168,10 +177,19 @@ function loadWhiteTheme() {
   $("#strongThemed0").css("color", "#000000");
   $("#strongThemed1").css("color", "#000000");
 
+  $(".modal-content").css("background-color", "#ffffff");
+  $(".modal-footer").css("background-color", "#ffffff");
+  $(".footerText").css("color", "#000000");
+
   $("#iconThemed0").css("color", "#000000");
   $("#iconThemed1").css("color", "#000000");
   $("#iconThemed2").css("color", "#000000");
   $("#iconThemed3").css("color", "#000000");
+
+  $("#iconThemedWindows").css("color", "#000000");
+  $("#iconThemedAndroid").css("color", "#000000");
+  $("#iconThemediOS").css("color", "#000000");
+  $("#iconThemedBrowswer").css("color", "#000000");
 
   $("#modalColor").css("background-color", "#ffffff");
 

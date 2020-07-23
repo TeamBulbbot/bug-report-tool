@@ -60,47 +60,6 @@ function resize(x) {
   }
 }
 
-function loadWhiteTheme() {
-  $("body").css("background-color", "#ffffff");
-  $("footer").css("color", "#000000");
-  $("label").css("color", "#000000");
-  $("li").css("color", "#000000");
-  $("h5").css("color", "#000000");
-  $("input").css("color", "#000000");
-  $("textarea").css("color", "#000000");
-
-  $("#strongThemed0").css("color", "#000000");
-  $("#strongThemed1").css("color", "#000000");
-
-  $("#command").css("color", "#000000");
-
-  $("#iconThemed0").css("color", "#000000");
-  $("#iconThemed1").css("color", "#000000");
-  $("#iconThemed2").css("color", "#000000");
-  $("#iconThemed3").css("color", "#000000");
-  $("#iconThemed4").css("color", "#000000");
-
-  $("#modalColor").css("background-color", "#ffffff");
-
-  $(".boldText").css("font-weight", 700);
-  $(".boldText").css("color", "#000000");
-
-  $(".fieldTitle").css("font-size", 15);
-  $(".fieldTitle").css("color", "#646f6a");
-
-  $(".fieldItem").css("font-size", 13);
-  $(".fieldItem").css("color", "#000000");
-
-  $(".text").css("color", "#000000");
-
-  $(".settings").css("background-color", "#333740");
-  $(".settings").css("color", "#ffffff");
-  $(".settings").css("padding", "3px");
-
-  $("#modelFooter").css("background-color", "#ffffff");
-  $("#footerText").css("color", "#000000");
-}
-
 function loadDarkTheme() {
   $("body").css("background-color", "#2c2f33");
   $("footer").css("color", "#959c97");
@@ -120,6 +79,15 @@ function loadDarkTheme() {
   $("#iconThemed2").css("color", "#ffffff");
   $("#iconThemed3").css("color", "#ffffff");
   $("#iconThemed4").css("color", "#ffffff");
+
+  $("#iconThemedWindows").css("color", "#ffffff");
+  $("#iconThemedAndroid").css("color", "#ffffff");
+  $("#iconThemediOS").css("color", "#ffffff");
+  $("#iconThemedBrowswer").css("color", "#ffffff");
+
+  $(".modal-content").css("background-color", "#2c2f33");
+  $(".modal-footer").css("background-color", "#2c2f33");
+  $(".footerText").css("color", "#ffffff");
 
   $("#modalColor").css("background-color", "#2c2f33");
 
@@ -143,4 +111,54 @@ function loadDarkTheme() {
 
   $("#modelFooter").css("background-color", "#2c2f33");
   $("#footerText").css("color", "#ffffff");
+}
+
+function loadWhiteTheme() {
+  $("body").css("background-color", "#ffffff");
+  $("footer").css("color", "#000000");
+  $("label").css("color", "#000000");
+  $("li").css("color", "#000000");
+  $("h5").css("color", "#000000");
+  $("input").css("color", "#000000");
+  $("textarea").css("color", "#000000");
+
+  $("#strongThemed0").css("color", "#000000");
+  $("#strongThemed1").css("color", "#000000");
+
+  $(".modal-content").css("background-color", "#ffffff");
+  $(".modal-footer").css("background-color", "#ffffff");
+  $(".footerText").css("color", "#000000");
+
+  $("#command").css("color", "#000000");
+
+  $("#iconThemed0").css("color", "#000000");
+  $("#iconThemed1").css("color", "#000000");
+  $("#iconThemed2").css("color", "#000000");
+  $("#iconThemed3").css("color", "#000000");
+  $("#iconThemed4").css("color", "#000000");
+
+  $("#iconThemedWindows").css("color", "#000000");
+  $("#iconThemedAndroid").css("color", "#000000");
+  $("#iconThemediOS").css("color", "#000000");
+  $("#iconThemedBrowswer").css("color", "#000000");
+
+  $("#modalColor").css("background-color", "#ffffff");
+
+  $(".boldText").css("font-weight", 700);
+  $(".boldText").css("color", "#000000");
+
+  $(".fieldTitle").css("font-size", 15);
+  $(".fieldTitle").css("color", "#646f6a");
+
+  $(".fieldItem").css("font-size", 13);
+  $(".fieldItem").css("color", "#000000");
+
+  $(".text").css("color", "#000000");
+
+  $(".settings").css("background-color", "#333740");
+  $(".settings").css("color", "#ffffff");
+  $(".settings").css("padding", "3px");
+
+  $("#modelFooter").css("background-color", "#ffffff");
+  $("#footerText").css("color", "#000000");
 }

@@ -34,6 +34,9 @@
           <li>
             <a href="javascript:switchTheme()"><i class="material-icons left" style="padding-top: 4px;">wb_sunny</i>Change Theme</a>
           </li>
+          <li>
+            <a class="modal-trigger" href="#modalConfig"><i class="material-icons left modal-trigger" href="#modalConfig">build</i>Configuartion</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -49,6 +52,9 @@
       </li>
       <li>
         <a href="javascript:switchTheme()"><i class="material-icons left">wb_sunny</i>Change Theme</a>
+      </li>
+      <li>
+        <a class="modal-trigger" href="#modalConfig"><i class="material-icons left modal-trigger" href="#modalConfig">build</i>Configuartion</a>
       </li>
     </ul>
 
@@ -72,6 +78,47 @@
         </ul>
       </div>
       <br />
+
+       <!-- Modal Structure Config-->
+ <div id="modalConfig" class="modal">
+  <div class="modal-content" class="modalColor">
+
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix" style="size: 5px" id="iconThemedWindows">desktop_windows</i>
+          <textarea id="desktopConfig" class="materialize-textarea" ></textarea>
+          <label for="desktopConfig" id="resize">Desktop Config</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix" style="size: 5px" id="iconThemedAndroid">android</i>
+          <textarea id="androidConfig" class="materialize-textarea" ></textarea>
+          <label for=androidConfig" id="resize">Android Config</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix" style="size: 5px" id="iconThemediOS">phone_iphone</i>
+          <textarea id="iOSConfig" class="materialize-textarea" ></textarea>
+          <label for="iOSConfig" id="resize">iOS Config</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix" style="size: 5px" id="iconThemedBrowswer">wifi</i>
+          <textarea id="browserConfig" class="materialize-textarea" ></textarea>
+          <label for="browserConfig" id="resize">Browser Config</label>
+        </div>
+      </div>
+      <a class="waves-effect waves-light btn modal-close btn-small" style="background-color: #7289da;" href="#!" onclick="updateConfig()">Save</a></a>
+    <br />
+  </div>
+</div>
+
 
       <!-- Modal Structure -->
       <div id="modal1" class="modal">

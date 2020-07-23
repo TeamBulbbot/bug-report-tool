@@ -24,9 +24,6 @@ function setCookie(name, value, days) {
   document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
-
-
-
 function checkTheme() {
   if (getCookie("theme") === null) {
     setCookie("theme", "dark", 365);
@@ -36,20 +33,37 @@ function checkTheme() {
   if (getCookie("theme") === "dark") loadDarkTheme();
   else if (getCookie("theme") === "white") loadWhiteTheme();
   else console.error("[Themes] Fatal error occurred while loading theme!");
-
 }
 
 function switchTheme() {
   if (getCookie("theme") === "dark") {
     loadWhiteTheme();
-    eraseCookie("theme")
+    eraseCookie("theme");
     setCookie("theme", "white", 365);
-
   } else if (getCookie("theme") === "white") {
     loadDarkTheme();
-    eraseCookie("theme")
+    eraseCookie("theme");
     setCookie("theme", "dark", 365);
-
   } else console.error("[Themes] Fatal error occurred while loading theme!");
+}
 
+function updateConfig() {
+  setConfigCookies("desktopConfig");
+  setConfigCookies("androidConfig");
+  setConfigCookies("iOSConfig");
+  setConfigCookies("browserConfig");
+}
+
+function setConfigCookies(config) {
+  if (getCookie(config) === null) {
+    setCookie(config, document.getElementById(config).value, 365);
+    return;
+  }
+
+  eraseCookie(config);
+  setCookie(config, document.getElementById(config).value, 365);
+}
+
+function loadConfig(config) {
+  document.getElementById("systemVers").value = getCookie(config);
 }
