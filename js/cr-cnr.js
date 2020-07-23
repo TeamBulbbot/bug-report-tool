@@ -3,7 +3,8 @@
  * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {String} str  The user-submitted string
  * @return {String} str  The sanitized string
- *var sanitizeHTML = function (str) {
+ */
+var sanitizeHTML = function (str) {
   var temp = document.createElement("div");
   temp.textContent = str;
   return temp.innerHTML;
@@ -43,7 +44,7 @@ function myCallback() {
 
     x.innerHTML += " ";
     x.innerHTML += sanitizeHTML(document.getElementById("clientVers").value);
-    x.innerHTML += " ";
+    x.innerHTML += "  ";
     x.innerHTML += sanitizeHTML(document.getElementById("systemVers").value);
   }
 }
