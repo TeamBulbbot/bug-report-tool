@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Discord Bug Syntax Tool</title>
+      <link rel="shortcut icon" href="images/icon.ico" />
+      <!-- Created by Smashicons -->
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      <link rel="stylesheet" href="css/edit.css" />
+   </head>
+   <body onload="checkTheme();">
+      <nav class="navColor" style="padding: 0px 5px; position: fixed; z-index: 1">
+         <div class="nav-bar">
+            <a href="#" class="brand-logo" id="titleText">
+            <i class="material-icons left" style="padding-left: 7px;">bug_report</i> DTesters Bug Tool
+            </a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+               <li>
+                  <a href="index.html">
+                  <i class="material-icons left" style="color: white">add_box</i>Create
+                  </a>
+               </li>
+               <li>
+                  <a href="edit.html">
+                  <i class="material-icons left">update</i>Edit
+                  </a>
+               </li>
+               <li>
+                  <a href="cnr-cr.html">
+                  <i class="material-icons left">done_all</i>CR / CNR
+                  </a>
+               </li>
+               <li>
+                  <a href="javascript:switchTheme()">
+                  <i class="material-icons left">wb_sunny</i>Change Theme
+                  </a>
+               </li>
+               <li>
+                  <a href="beautify.html">
+                  <i class="material-icons left">brush</i>Beautify Report
+                  </a>
+               </li>
+               <li>
+                  <a class="modal-trigger "  href="#modalConfig">
+                  <i class="material-icons left modal-trigger " href="#modalConfig">build</i>Configuartion
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <ul class="sidenav" id="mobile-nav">
+         <li>
+            <a href="#">
+            <i class="material-icons left">add_box</i>Create
+            </a>
+         </li>
+         <li>
+            <a href="edit.html">
+            <i class="material-icons left">update</i>Edit
+            </a>
+         </li>
+         <li>
+            <a href="cnr-cr.html">
+            <i class="material-icons left">done_all</i>CR / CNR
+            </a>
+         </li>
+         
+         <li>
+            <a href="beautify.html"><i class="material-icons left">brush</i>Beautify Report</a>
+          </li>
+          <li>
+            <a href="javascript:switchTheme()"><i class="material-icons left">wb_sunny</i>Change Theme</a>
+          </li>
+          <li>
+            <a class="modal-trigger "  href="#modalConfig"><i class="material-icons left modal-trigger " href="#modalConfig">build</i>Configuartion</a>
+          </li>
+      </ul>
+      <br />
+      <div class="column row" id="content">
+         ::before
+         <h5 style="padding-top: 20px; padding-left: 5px;">Beautify bug report</h5>
+         <br>
+         <!-- Modal Structure Config-->
+         <div id="modalConfig" class="modal">
+            <div class="modal-content" class="modalColor">
+               <div class="row">
+                  <div class="input-field col s6">
+                     <i class="material-icons prefix" style="size: 5px" id="iconThemedWindows">desktop_windows</i>
+                     <textarea id="desktopConfig" class="materialize-textarea" ></textarea>
+                     <label for="desktopConfig" id="resize">Desktop Config</label>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="input-field col s6">
+                     <i class="material-icons prefix" style="size: 5px" id="iconThemedAndroid">android</i>
+                     <textarea id="androidConfig" class="materialize-textarea" ></textarea>
+                     <label for=androidConfig" id="resize">Android Config</label>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="input-field col s6">
+                     <i class="material-icons prefix" style="size: 5px" id="iconThemediOS">phone_iphone</i>
+                     <textarea id="iOSConfig" class="materialize-textarea" ></textarea>
+                     <label for="iOSConfig" id="resize">iOS Config</label>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="input-field col s6">
+                     <i class="material-icons prefix" style="size: 5px" id="iconThemedBrowswer">wifi</i>
+                     <textarea id="browserConfig" class="materialize-textarea" ></textarea>
+                     <label for="browserConfig" id="resize">Browser Config</label>
+                  </div>
+               </div>
+               <a class="waves-effect waves-light btn modal-close btn-small" style="background-color: #7289da;" href="#!" onclick="updateConfig()">Save</a>
+               </a>
+               <br />
+            </div>
+         </div>
+         <br>
+         <div class="row">
+            <form class="col s12">
+               <div class="row">
+                  <div class="input-field col s12">
+                     <textarea id="submitsnippet" class="materialize-textarea"></textarea>
+                     <label for="submitsnippet">!submit snippet</label>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <br />
+         <div class="callout mbox" style="border-left: solid #5FA1E1 5px;">
+            <p class="text">
+               <strong class="boldText">Wumpus#0000 (123456789123456789)</strong>
+            </p>
+            <a href="https://bugs.discord.com/" target="_blank">
+               <p class="text">
+                  <strong class="boldLink" id="title"> N/A</strong>
+               </p>
+            </a>
+            
+            <div id="str">
+      
+          
+         </div>
+           
+            <p class="text">
+               <strong class="fieldTitle" >Expected result</strong>
+            </p>
+            <p class="text">
+               <strong class="fieldItem" id="expected"> N/A</strong>
+            </p>
+            <p class="text">
+               <strong class="fieldTitle">Actual result</strong>
+            </p>
+            <p class="text">
+               <strong class="fieldItem" id="actual"> N/A</strong>
+            </p>
+            <p class="text">
+               <strong class="fieldTitle">Client settings</strong>
+            </p>
+            <p class="text">
+               <strong class="fieldItem" id="client">  N/A</strong>
+            </p>
+            <p class="text">
+               <strong class="fieldTitle">System settings</strong>
+            </p>
+            <p class="text">
+               <strong class="fieldItem" id="system"> N/A</strong>
+            </p>
+          
+            <br />
+            <div>
+               <p style="color: #9e9e9e;">#123: • Today at 01:37 PM</p>
+            </div>
+         
+         </div>
+         <footer style="text-align: center">
+            Created by 
+            <a href="https://github.com/y3ll0wlife" target="_blank"> y3ll0w</a> and 
+            <a href="https://github.com/KlukCZ" target="_blank">KlukCZ</a>
+            <br>
+            Have a feature request or a bug? Post it on our 
+            <a href="https://github.com/TestersQTs/bug-report-tool/issues" target="_blank">issue tracker</a>!
+         </footer>
+         <!-- Javascript -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+         <script src="js/theme.js"></script>
+         <script src="js/beautifyReport.js"></script>
+      </div>
+   </body>
+</html>
+
