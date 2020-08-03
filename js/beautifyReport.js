@@ -12,10 +12,6 @@ var sanitizeHTML = function (str) {
 
 $(document).ready(function () {
 	$(".modal").modal();
-	$("select").formSelect();
-	$("#submitsnippet");
-	$("#submitsnippet").textareaAutoResize();
-	$(".dropdown-trigger").dropdown();
 	$(".sidenav").sidenav();
 });
 
