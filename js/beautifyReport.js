@@ -10,8 +10,14 @@ var sanitizeHTML = function (str) {
 	return temp.innerHTML;
 };
 
-$("#submitsnippet").val("New Text");
-M.textareaAutoResize($("#submitsnippet"));
+$(document).ready(function () {
+	$(".modal").modal();
+	$("select").formSelect();
+	$("#submitsnippet").val("New Text");
+	M.textareaAutoResize($("#submitsnippet"));
+	$(".dropdown-trigger").dropdown();
+	$(".sidenav").sidenav();
+});
 
 var callback = window.setInterval(myCallback, 200);
 function myCallback() {
