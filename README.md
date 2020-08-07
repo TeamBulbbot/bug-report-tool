@@ -19,7 +19,7 @@
 
 👤 **y3ll0w**
 
-- Website: http://y3ll0w.tech
+- Website: https://mrphilip.xyz/
 - Twitter: [@y3ll0wLife](https://twitter.com/y3ll0wLife)
 - Github: [@y3ll0wlife](https://github.com/y3ll0wlife)
 - Discord: mrphilip#0882
