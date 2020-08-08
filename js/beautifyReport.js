@@ -36,7 +36,15 @@ function myCallback() {
 			var div = document.getElementById("str");
 			var p = document.createElement("p");
 			p.innerHTML = sanitizeHTML("- " + steps[i]);
-			p.className = "text";
+			//p.className = "text";
+
+			if (getCookie("theme") === null) {
+				setCookie("theme", "dark", 365);
+			}
+
+			if (getCookie("theme") === "dark") p.style.color = "#ffffff";
+			else if (getCookie("theme") === "white") p.style.color = "#000000";
+
 			div.appendChild(p);
 		}
 
@@ -87,7 +95,7 @@ function loadDarkTheme() {
 	$(".fieldItem").css("color", "#ffffff");
 
 	$(".text").css("color", "#ffffff");
-	$("#str").css("color", "#ffffff");
+	$("p").css("color", "#ffffff");
 
 	$("#modelFooter").css("background-color", "#2c2f33");
 	$("#footerText").css("color", "#ffffff");
@@ -133,7 +141,7 @@ function loadWhiteTheme() {
 	$(".fieldItem").css("color", "#000000");
 
 	$(".text").css("color", "#000000");
-	$("#str").css("color", "#000000");
+	$("p").css("color", "#000000");
 
 	$("#modelFooter").css("background-color", "#ffffff");
 	$("#footerText").css("color", "#000000");
