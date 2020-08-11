@@ -38,10 +38,18 @@ body {
   height:auto !important;
 }
 
+.material-icons {
+  padding-top: 4px;
+}
+
 @media screen and (max-width: 686px) {
   .column {
     padding-right: 10px;
     padding-left: 10px;
+  }
+
+  .material-icons {
+    padding-top: 0px;
   }
 }
 
