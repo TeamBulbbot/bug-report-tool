@@ -114,7 +114,7 @@ function myCallback() {
         var lis = document.getElementById("myUL").getElementsByTagName("li");
         //x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").slice(0, -1));
         if (i == 0) x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").replace("-", ""));
-        else x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").replace("-", "~"));
+        else x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", ""));
       }
     } else x.innerHTML += sanitizeHTML(document.getElementById("newContent").value);
   }
