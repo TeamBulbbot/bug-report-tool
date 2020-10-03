@@ -113,7 +113,7 @@ function myCallback() {
 		for (let i = 0; i < steps.length; i++) {
 			var lis = document.getElementById("myUL").getElementsByTagName("li");
 			if (i == 0) x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").replace("-", ""));
-			else x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").replace("-", "~"));
+			else x.innerHTML += sanitizeHTML(lis[i].textContent.replace("×", "").replace("-", "-"));
 		}
 
 		// Expected Result
