@@ -131,6 +131,8 @@ function myCallback() {
 		// System Settings
 		x.innerHTML += " -s ";
 		x.innerHTML += sanitizeHTML(document.getElementById("systemVers").value);
+		// Remove extra whitespaces if they haven't been removed 
+		x.innerHTML = x.innerHTML.replace(/\s+/g, ' ').trim();
 	}
 }
 
