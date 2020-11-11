@@ -22,7 +22,7 @@
 - Website: https://mrphilip.xyz/
 - Twitter: [@y3ll0wLife](https://twitter.com/y3ll0wLife)
 - Github: [@y3ll0wlife](https://github.com/y3ll0wlife)
-- Discord: mrphilip#0882
+- Discord: mrphilip#0001
 
 ## 🤝 Contributing
 
