@@ -7,7 +7,7 @@
 
 > A way for Discord Bug hunters to create tickets more efficiently
 
-### 🌐 [Website](https://testersqts.github.io/bug-report-tool/index.html)
+### 🌐 [Website](https://teambulbbot.github.io/bug-report-tool/index.html)
 
 ## Author(s)
 
@@ -35,7 +35,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2020 [y3ll0w](https://github.com/y3ll0wlife) / [KlukCZ](https://github.com/KlukCZ).<br />
-This project is [MIT](https://github.com/y3ll0wlife/bug-report-tool/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/TeamBulbbot/bug-report-tool/blob/master/LICENSE) licensed.
 
 ---
 
