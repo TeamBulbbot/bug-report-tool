@@ -1,3 +1,4 @@
+<h1 align="center">This project has been discontinued and the reporsitory archived</h1>
 <h1 align="center">Welcome to Bug Report Tool 👋</h1>
 <p>
   <a href="https://github.com/y3ll0wlife/bug-report-tool/blob/master/LICENSE" target="_blank">
